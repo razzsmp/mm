@@ -4,14 +4,15 @@ import "firebase/database";
 import "firebase/storage";
 import "firebase/analytics";
 
-var firebaseConfig = {
-    apiKey: "AIzaSyAm0btAKMAiFnTLUO_YDZDJ7nm6673nJv4",
-    authDomain: "jimhnb.firebaseapp.com",
-    projectId: "jimhnb",
-    storageBucket: "jimhnb.appspot.com",
-    messagingSenderId: "251597573789",
-    appId: "1:251597573789:web:0983db390549d44bb60e74",
-    measurementId: "G-JM4CPQNKTZ"
+const firebaseConfig = {
+  apiKey: "AIzaSyAm0btAKMAiFnTLUO_YDZDJ7nm6673nJv4",
+  authDomain: "jimhnb.firebaseapp.com",
+  databaseURL: "https://jimhnb-default-rtdb.firebaseio.com",
+  projectId: "jimhnb",
+  storageBucket: "jimhnb.appspot.com",
+  messagingSenderId: "251597573789",
+  appId: "1:251597573789:web:0983db390549d44bb60e74",
+  measurementId: "G-JM4CPQNKTZ"
 };
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
