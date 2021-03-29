@@ -5,14 +5,13 @@ import "firebase/storage";
 import "firebase/analytics";
 
 var firebaseConfig = {
-  apiKey: "AIzaSyCmjQ-QuDiTXe3YBU7zJQl0g5q-_mPt9UY",
-  authDomain: "discord-clone-66d9a.firebaseapp.com",
-  databaseURL: "https://discord-clone-66d9a.firebaseio.com",
-  projectId: "discord-clone-66d9a",
-  storageBucket: "discord-clone-66d9a.appspot.com",
-  messagingSenderId: "265446087212",
-  appId: "1:265446087212:web:392811aa65680282680f89",
-  measurementId: "G-XQPC1S7QLC"
+    apiKey: "AIzaSyAm0btAKMAiFnTLUO_YDZDJ7nm6673nJv4",
+    authDomain: "jimhnb.firebaseapp.com",
+    projectId: "jimhnb",
+    storageBucket: "jimhnb.appspot.com",
+    messagingSenderId: "251597573789",
+    appId: "1:251597573789:web:0983db390549d44bb60e74",
+    measurementId: "G-JM4CPQNKTZ"
 };
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
