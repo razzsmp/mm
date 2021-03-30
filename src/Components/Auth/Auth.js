@@ -31,7 +31,7 @@ class Auth extends React.Component {
         user.user
           .updateProfile({
             displayName: username,
-            photoURL: `https://www.freepnglogos.com/uploads/discord-logo-png/seven-kingdoms-9.png`
+            photoURL: `https://www.jimhub.gq/logo512.png`
           })
           .then(() => {
             firebase
