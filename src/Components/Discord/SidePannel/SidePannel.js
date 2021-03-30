@@ -77,6 +77,12 @@ class SidePannel extends React.Component {
 						photo: this.props.user.photoURL
 					}
 				},
+			category: {
+					general: {
+						name: "general",
+						channels: [{ name: "general", type: "text", categoryID: "general" }]
+					}
+				}
 			})
 			.then(() => {
 				this.setState({ createStatus: "adding server" });
