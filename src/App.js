@@ -1,4 +1,4 @@
-import React, { lazy, Suspense, useLayoutEffect, useState } from "react";
+import React, { lazy, Suspense } from "react";
 import Spinner from "./Components/Spinner/Spinner";
 import { Switch, Route, withRouter } from "react-router-dom";
 import firebase from "./firebase";
