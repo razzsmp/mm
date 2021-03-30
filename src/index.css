@@ -12,19 +12,20 @@
 }
 
 html {
-		--color-0: #fff;
-		--color-1: #dcddde;
-		--color-2: #b9bbbe;
-		--color-3: #72767d;
-		--color-4: #414449;
-		--color-5: #36393f;
-		--color-6: #23262b;
+	font-size: 62%;
+	--color-0: #fff;
+        --color-1: #dcddde;
+	--color-2: #b9bbbe;
+	--color-3: #72767d;
+	--color-4: #414449;
+	--color-5: #36393f;
+	--color-6: #23262b;
 
-		--blue-1: #3d5af1;
-		--red-1: #ff304f;
-		--green-1: #22eaaa;
-		--green-2: #17b978;
-	}
+	--blue-1: #3d5af1;
+	--red-1: #ff304f;
+	--green-1: #22eaaa;
+	--green-2: #17b978;
+}
 
 @media screen and (prefers-color-scheme: dark) {
 	html {
