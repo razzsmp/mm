@@ -50,7 +50,7 @@ const AddModal = props => {
 					backgroundImage: `url(${
 						file
 							? URL.createObjectURL(file)
-							: "https://www.freepnglogos.com/uploads/discord-logo-png/discord-logo-logodownload-download-logotipos-1.png"
+							: "https://www.jimhub.gq/logo512.png"
 					})`
 				}}
 			></label>
