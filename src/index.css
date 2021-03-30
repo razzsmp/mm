@@ -12,21 +12,19 @@
 }
 
 html {
-	font-size: 62%;
+		--color-0: #fff;
+		--color-1: #dcddde;
+		--color-2: #b9bbbe;
+		--color-3: #72767d;
+		--color-4: #414449;
+		--color-5: #36393f;
+		--color-6: #23262b;
 
-	--color-0: #353941;
-	--color-1: #252525;
-	--color-2: #b9bbbe;
-	--color-3: #72767d;
-	--color-4: #fff;
-	--color-5: #ebebeb;
-	--color-6: rgb(221, 221, 221);
-
-	--blue-1: #3d5af1;
-	--red-1: #ff304f;
-	--green-1: #22eaaa;
-	--green-2: #17b978;
-}
+		--blue-1: #3d5af1;
+		--red-1: #ff304f;
+		--green-1: #22eaaa;
+		--green-2: #17b978;
+	}
 
 @media screen and (prefers-color-scheme: dark) {
 	html {
