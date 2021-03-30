@@ -6,7 +6,6 @@ import { connect } from "react-redux";
 import {
 	login,
 	setServerLoading,
-	loadTotalServers,
 	updateServer,
 	removeServer,
 	addMessages,
@@ -23,7 +22,6 @@ class App extends React.Component {
 			if (user) {
 				this.props.history.push("/");
 				this.props.login(user);
-				this.props.loadTotalServers();
 				this.addListnerToUser(user.uid);
 			} else {
 				this.props.history.replace("/login");
@@ -166,7 +164,6 @@ function mapDispatchToProps(dispatch) {
 	return {
 		login: user => dispatch(login(user)),
 		setLoading: isLoading => dispatch(setServerLoading(isLoading)),
-		loadTotalServers: () => dispatch(loadTotalServers()),
 		updateServer: (id, server) => dispatch(updateServer(id, server)),
 		addDm: (id, dms) => dispatch(addDm(id, dms)),
 		removeServer: id => dispatch(removeServer(id)),
