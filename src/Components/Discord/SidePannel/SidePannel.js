@@ -61,7 +61,7 @@ class SidePannel extends React.Component {
 					admin: {
 						isAdmin: true,
 						color: "#ff1f5a",
-						name: "admin"
+						name: "owner"
 					},
 					normal: {
 						isAdmin: false,
@@ -73,16 +73,10 @@ class SidePannel extends React.Component {
 					[this.props.user.uid]: {
 						name: this.props.user.displayName,
 						uid: this.props.user.uid,
-						role: "admin",
+						role: "owner",
 						photo: this.props.user.photoURL
 					}
 				},
-				category: {
-					general: {
-						name: "general",
-						channels: [{ name: "general", type: "text", categoryID: "general" }]
-					}
-				}
 			})
 			.then(() => {
 				this.setState({ createStatus: "adding server" });
@@ -130,7 +124,7 @@ class SidePannel extends React.Component {
 			<div className="sidepannel">
 				<Switch
 					active={selectedServer === null}
-					url="https://i.imgur.com/qMgJs45.png"
+					url="https://www.jimhub.gq/logo512.png"
 					onClick={() => {
 						this.props.changeCurrentSelected({
 							server: null
