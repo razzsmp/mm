@@ -23,6 +23,14 @@ export const setServerLoading = isLoading => {
 	};
 };
 
+//total server list on platform,includes joined servers and nonjoined severs
+const addTotalServers = servers => {
+	return {
+		type: actionTypes.ADD_TOTAL_SERVER,
+		payload: servers
+	};
+};
+
 // // loading total server list or not
 // const setLoadingTotalServer = isLoading => {
 //   return {
@@ -39,7 +47,17 @@ export const selectServer = server => {
 };
 
 // async func to load total servers from db
-
+export const loadTotalServers = () => {
+	return dispatch => {
+		firebase
+			.database()
+			.ref("servers")
+			.once("value", snap => {
+				const servers = convertToArray(snap.val());
+				dispatch(addTotalServers(servers));
+			});
+	};
+};
 
 export const updateServer = (id, server) => {
 	return {
