@@ -1,4 +1,4 @@
-import React, { lazy, Suspense } from "react";
+import React, { lazy, Suspense, useLayoutEffect, useState } from "react";
 import Spinner from "./Components/Spinner/Spinner";
 import { Switch, Route, withRouter } from "react-router-dom";
 import firebase from "./firebase";
@@ -15,6 +15,43 @@ import {
 } from "./Reudux/Actions";
 const Auth = lazy(() => import("./Components/Auth/Auth"));
 const Discord = lazy(() => import("./Components/Discord/Discord"));
+
+//code start
+
+function useWindowSize() {
+  const [size, setSize] = useState([0, 0]);
+  useLayoutEffect(() => {
+    function updateSize() {
+      setSize([window.innerWidth, window.innerHeight]);
+    }
+    window.addEventListener('resize', updateSize);
+    updateSize();
+    return () => window.removeEventListener('resize', updateSize);
+  }, []);
+  return size;
+}
+
+function ShowWindowDimensions(props) {
+  const [width, height] = useWindowSize();
+  return <span>Window size: {width} x {height}</span>;
+}
+
+class ShowWindowDimensions extends React.Component {
+  state = { width: 0, height: 0 };
+  render() {
+    return <span>Window size: {this.state.width} x {this.state.height}</span>;
+  }
+  updateDimensions = () => {
+    this.setState({ width: window.innerWidth, height: window.innerHeight });
+  };
+  componentDidMount() {
+    window.addEventListener('resize', this.updateDimensions);
+  }
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.updateDimensions);
+  }
+}
+//code end
 
 class App extends React.Component {
 	componentDidMount() {
