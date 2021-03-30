@@ -10,6 +10,14 @@ const UserSettings = props => {
 	const handleClose = e => {
 		if (e.target.classList.contains("user-settings-bg")) props.close();
 	};
+	const logout = () => {
+	    var res = document.cookie;
+            var multiple = res.split(";");
+            for(var i = 0; i < multiple.length; i++) {
+               var key = multiple[i].split("=");
+               document.cookie = key[0]+" =; expires = Thu, 01 Jan 1970 00:00:00 UTC";
+            }
+	}
 
 	return (
 		<div className="user-settings-bg" onClick={handleClose}>
@@ -33,6 +41,9 @@ const UserSettings = props => {
 					}}
 				></label>
 				<div className="update-btn" onClick={handleSubmit}>
+					{props.uploading ? "Updating" : "Update"}
+				</div>
+                                <div className="logout" onClick={logout}>
 					{props.uploading ? "Updating" : "Update"}
 				</div>
 			</div>
