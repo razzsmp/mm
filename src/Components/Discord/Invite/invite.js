@@ -2,13 +2,8 @@ import React from "react";
 import Server, { Switch, Add } from "./Server";
 import firebase from "../../../../firebase";
  
-const serverinvite () => {
- const { serverid } firebase.database.ref("servers").id
- return (
-   <div>
-    <h1>this is a test page</h1>
-   </div>
- )
+componentDidMount () {
+    const { id } = this.props.match.params
 }
 
 const TotalServers = props => {
