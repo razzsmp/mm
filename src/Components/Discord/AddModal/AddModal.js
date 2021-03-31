@@ -21,7 +21,7 @@ const AddModal = props => {
 		if (name.length < 3) errors.push("Name Must be Greater then 2");
 		if (props.create === "Channel" && option === "")
 			errors.push("Select a category");
-		if (!file && props.create === "Server") setFile("https://www.jimhub.gq/logo512.png")
+		if (!file && props.create === "Server") errors.push("Please Upload a pic");
 		setErrors(errors);
 		return errors.length === 0;
 	};
