@@ -12,9 +12,8 @@ import serverinvite from "./Components/Discord/Invite/invite";
 
 ReactDOM.render(
   <Provider store={store}>
-    <BrowserRouter>
+    <Browser
       <App />
-      <Route path="/invite/:serverinvite" component={serverinvite} />
     </BrowserRouter>
   </Provider>,
   document.getElementById("root")
