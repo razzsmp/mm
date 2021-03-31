@@ -32,7 +32,7 @@ const TotalServers = props => {
   };
   return (
     <div className="totalservers">
-      <h1>Servers to join</h1>
+      <h1>Friends List</h1>
       {props.totalServers
         ? props.totalServers.map(server => (
             <Card
