@@ -14,8 +14,6 @@ const MessageForm = props => {
 	const [showEmojiPicker, setShowEmojiPicker] = useState(false);
 	const [showGiphyPicker, setShowGiphyPicker] = useState(false);
 	let inputRef = null;
-	
-	const aaa = props.server.channel.id
 
 	const createMessage = (message, isTextMessage) => {
 		if (props.server) {
