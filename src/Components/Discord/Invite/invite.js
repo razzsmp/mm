@@ -2,7 +2,7 @@ import React from "react";
 import Server, { Switch, Add } from "./Server";
 import firebase from "../../../../firebase";
  
-const serverinvite (props) => {
+const serverinvite () => {
  const { serverid } firebase.database.ref("servers").id
  return (
    <div>
