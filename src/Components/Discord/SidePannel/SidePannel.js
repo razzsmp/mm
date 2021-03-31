@@ -60,8 +60,8 @@ class SidePannel extends React.Component {
 				roles: {
 					admin: {
 						isAdmin: true,
-						color: "#ff1f5a",
-						name: "owner"
+						color: "#ccc",
+						name: "admin"
 					},
 					normal: {
 						isAdmin: false,
@@ -73,11 +73,11 @@ class SidePannel extends React.Component {
 					[this.props.user.uid]: {
 						name: this.props.user.displayName,
 						uid: this.props.user.uid,
-						role: "owner",
+						role: "admin",
 						photo: this.props.user.photoURL
 					}
 				},
-			category: {
+				category: {
 					general: {
 						name: "general",
 						channels: [{ name: "general", type: "text", categoryID: "general" }]
