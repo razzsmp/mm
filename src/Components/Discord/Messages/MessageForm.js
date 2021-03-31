@@ -14,6 +14,8 @@ const MessageForm = props => {
 	const [showEmojiPicker, setShowEmojiPicker] = useState(false);
 	const [showGiphyPicker, setShowGiphyPicker] = useState(false);
 	let inputRef = null;
+	
+	const aaa = props.server
 
 	const createMessage = (message, isTextMessage) => {
 		if (props.server) {
@@ -139,7 +141,7 @@ const MessageForm = props => {
 					value={message}
 					onChange={e => setMessage(e.target.value)}
 					onKeyPress={e => handleKeyDown(e)}
-					placeholder={channel.id + `# message `}
+					placeholder={aaa.channel.id + `# message `}
 					autoFocus
 					ref={ref => (inputRef = ref)}
 				/>
