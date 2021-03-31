@@ -14,7 +14,6 @@ ReactDOM.render(
   <Provider store={store}>
     <Browser
       <App />
-       <Route exacth path="/invite/:id" component={serverinvite} />
     </BrowserRouter>
   </Provider>,
   document.getElementById("root")
