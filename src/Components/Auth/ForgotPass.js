@@ -51,4 +51,4 @@ const Forgotpass = props => {
 	);
 };
 
-export default forgotpass;
+export default Forgotpass;
