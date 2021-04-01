@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-const forgotpass = props => {
+const Forgotpass = props => {
 	const [email, setEmail] = useState("");
 	const [errors, setErrors] = useState([]);
 
