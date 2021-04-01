@@ -60,7 +60,7 @@ class SidePannel extends React.Component {
 				roles: {
 					admin: {
 						isAdmin: true,
-						color: "#ccc",
+						color: "#ff1f5a",
 						name: "admin"
 					},
 					normal: {
@@ -90,7 +90,23 @@ class SidePannel extends React.Component {
 			})
 			.catch(err => console.log(err));
 	};
+
 	//added created server to user data
+	addServer = id => {
+		this.props.firebase
+			.database()
+			.ref("users")
+			.child(`${this.props.user.uid}/servers/${id}`)
+			.set({
+				id
+			})
+			.then(() => {
+				this.setState({
+					createStatus: "",
+					showModal: false
+				});
+			});
+	};
 
 	displayServers = servers => {
 		const keys = Object.keys(servers);
@@ -143,8 +159,6 @@ class SidePannel extends React.Component {
 			</div>
 		);
 	}
-};
-
-
+}
 
 export default SidePannel;
