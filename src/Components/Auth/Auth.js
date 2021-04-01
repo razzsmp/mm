@@ -46,7 +46,7 @@ class Auth extends React.Component {
             firebase
               .database()
               .ref("users")
-              .child(user.user.uid)
+              .child(user.user.id)
               .set({
                 profile: {
                   name: user.user.displayName,
