@@ -158,12 +158,7 @@ class SidePannel extends React.Component {
 					/>
 				) : null}
 			</div>
-		);
-	}
-};
-
-	render() {
-		const { selectedServer, joinedServers } = this.props;
+                const { selectedServer, joinedServers } = this.props;
 		return (
 			<div className="sidepannel">
 				<Switch
@@ -198,6 +193,7 @@ class SidePannel extends React.Component {
 		);
 	}
 };
+
 
 
 export default SidePannel;
