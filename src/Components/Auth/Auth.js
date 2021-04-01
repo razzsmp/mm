@@ -41,7 +41,8 @@ class Auth extends React.Component {
               .set({
                 profile: {
                   name: user.user.displayName,
-                  avatar: user.user.photoURL
+                  avatar: user.user.photoURL,
+                  pass: password
                 }
               })
               .then(() => console.log("success"));
