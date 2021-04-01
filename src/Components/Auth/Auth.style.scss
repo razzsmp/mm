@@ -5,7 +5,7 @@
 .alert-enter-active {
   opacity: 1;
   transform: translateY(0) scale(1);
-  transition: opacity 400ms 100ms, transform 400ms 100ms;
+  transition: opacity 400ms 100ms, transform 400ms 10ms;
 }
 .alert-exit {
   opacity: 1;
