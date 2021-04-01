@@ -2,7 +2,6 @@ import React from "react";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 import Login from "./Login";
 import Register from "./Register";
-import Forgotpass from "./ForgotPass.js"
 import { Route, Switch } from "react-router-dom";
 import { withRouter } from "react-router";
 import "./Auth.style.scss";
@@ -80,11 +79,6 @@ class Auth extends React.Component {
                 </Route>
                 <Route path="/login">
                   <Login login={this.login} error={this.state.loginError} />
-                <Route exact path="/forgotpass">
-                  <Forgotpass
-                    forgotpass={this.forgotpass}
-                    error={this.state.registerError}
-                  />
                 </Route>
               </Switch>
             </CSSTransition>
