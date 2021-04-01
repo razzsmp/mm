@@ -38,7 +38,7 @@ class UserPannel extends React.Component {
 					}
 					onClick={() => this.changeSelected("totalServers")}
 				>
-					<span className="server-icon"></span>Servers
+					<span className="server-icon"></span>Friends
 				</div>
 
 				<div
