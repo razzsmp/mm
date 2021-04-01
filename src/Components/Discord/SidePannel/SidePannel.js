@@ -147,4 +147,4 @@ class SidePannel extends React.Component {
 
 
 
-export default SidePannel
+export default SidePannel;
