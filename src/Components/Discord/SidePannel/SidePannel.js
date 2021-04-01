@@ -91,29 +91,6 @@ class SidePannel extends React.Component {
 			.catch(err => console.log(err));
 	};
 	//added created server to user data
-	addServer = id => {
-		this.props.firebase
-			.database()
-                        .ref("servers")
-                        .child(id)
-                        .once("value", snap => {
-                          if (snap.val()) {
-				  this.props.firebase
-                                          .database()
-                                          .ref("servers/")
-                                          .child(id + "/users/" + props.user.uid)
-                                          .set({
-                                            name: props.user.displayName,
-                                            photo: props.user.photoURL,
-                                            role: "normal",
-                                            uid: props.user.uid
-                                          });
-				  this.props.firebase
-					  .database()
-					  .ref("users")
-					  .child(props.user.uid + "/servers/" + id)
-					  .set({ id });
-	};
 
 	displayServers = servers => {
 		const keys = Object.keys(servers);
@@ -156,16 +133,6 @@ class SidePannel extends React.Component {
 				{this.state.showModal ? (
 					<AddModal
 						create="Server"
-						show={this.setState.showModal}
-						onClick={this.handleCreateServer}
-						handleClose={() => this.setState({ showModal: false })}
-						status={this.state.createStatus}
-						percentage={this.state.percentage}
-					/>
-				) : null}
-				{this.state.showModal ? (
-					<addServer
-						create="Join"
 						show={this.setState.showModal}
 						onClick={this.handleCreateServer}
 						handleClose={() => this.setState({ showModal: false })}
