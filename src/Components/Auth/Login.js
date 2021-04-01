@@ -64,8 +64,7 @@ const Login = props => {
         <button type="submit">Login</button>
       </form>
       {props.error ? <div className="error">{props.error.message}</div> : ""}
-      <Link to="/register">Need an Account?</Link>
-      <Link to="/forgotpass">Forgotpassword?</Link>
+      <Link to="/register">Need an Account?</Link> <Link to="/forgotpass">Forgot Password?</Link>
     </div>
   );
 };
