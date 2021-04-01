@@ -2,7 +2,7 @@ import React from "react";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 import Login from "./Login";
 import Register from "./Register";
-import forgotpass from "./ForgotPass"
+import Forgotpass from "./ForgotPass.js"
 import { Route, Switch } from "react-router-dom";
 import { withRouter } from "react-router";
 import "./Auth.style.scss";
@@ -18,7 +18,7 @@ class Auth extends React.Component {
 
 
 
-  forgotpass = (email) => {
+  Forgotpass = (email) => {
     this.setState({ forgotpassError: null });
     firebase
       .sendPasswordResetEmail(email)
@@ -81,8 +81,8 @@ class Auth extends React.Component {
                 <Route path="/login">
                   <Login login={this.login} error={this.state.loginError} />
                 </Route>
-                <Route path="/forgotpass">
-                  <Login login={this.forgotpass} error={this.state.forgotpassError} />
+                <Route path="/forgot-password">
+                  <Login login={this.Forgotpass} error={this.state.forgotpassError} />
                 </Route>
               </Switch>
             </CSSTransition>
