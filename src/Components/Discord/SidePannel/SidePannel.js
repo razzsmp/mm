@@ -120,17 +120,25 @@ class SidePannel extends React.Component {
 	addServer = id => {
 		this.props.firebase
 			.database()
-			.ref("users")
-			.child(`${this.props.user.uid}/servers/${id}`)
-			.set({
-				id
-			})
-			.then(() => {
-				this.setState({
-					createStatus: "",
-					showModal: false
-				});
-			});
+                        .ref("servers")
+                        .child(id)
+                        .once("value", snap => {
+                          if (snap.val()) {
+				  this.props.firebase
+                                          .database()
+                                          .ref("servers/")
+                                          .child(id + "/users/" + props.user.uid)
+                                          .set({
+                                            name: props.user.displayName,
+                                            photo: props.user.photoURL,
+                                            role: "normal",
+                                            uid: props.user.uid
+                                          });
+				  this.props.firebase
+					  .database()
+					  .ref("users")
+					  .child(props.user.uid + "/servers/" + id)
+					  .set({ id });
 	};
 
 	displayServers = servers => {
@@ -182,7 +190,7 @@ class SidePannel extends React.Component {
 					/>
 				) : null}
 				{this.state.showModal ? (
-					<joinserver
+					<addServer
 						create="Join"
 						show={this.setState.showModal}
 						onClick={this.handleCreateServer}
