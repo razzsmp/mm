@@ -113,7 +113,6 @@ class SidePannel extends React.Component {
 					  .ref("users")
 					  .child(props.user.uid + "/servers/" + id)
 					  .set({ id });
-				});
 			});
 	};
 
