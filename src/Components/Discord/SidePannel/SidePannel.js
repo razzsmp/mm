@@ -160,7 +160,7 @@ class SidePannel extends React.Component {
 			</div>
 		);
 	}
-}
+};
 
 	render() {
 		const { selectedServer, joinedServers } = this.props;
@@ -197,6 +197,7 @@ class SidePannel extends React.Component {
 			</div>
 		);
 	}
-}
+};
+
 
 export default SidePannel;
