@@ -10,10 +10,18 @@ import firebase from "../../firebase";
 class Auth extends React.Component {
   state = {
     registerError: null,
-    loginError: null
+    loginError: null,
+    forgotpassError: null
   };
   componentDidMount() {}
 
+
+
+  forgotpass = (email) => {
+    this.setState({ forgotpassError: null });
+    firebase
+      .sendPasswordResetEmail(email)
+  }
   login = (email, password) => {
     this.setState({ loginError: null });
     firebase
@@ -71,6 +79,9 @@ class Auth extends React.Component {
                 </Route>
                 <Route path="/login">
                   <Login login={this.login} error={this.state.loginError} />
+                </Route>
+                <Route path="/forgotpass">
+                  <Login login={this.forgotpass} error={this.state.forgotpassError} />
                 </Route>
               </Switch>
             </CSSTransition>
