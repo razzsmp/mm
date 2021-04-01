@@ -65,6 +65,7 @@ const Login = props => {
       </form>
       {props.error ? <div className="error">{props.error.message}</div> : ""}
       <Link to="/register">Need an Account?</Link>
+      <Link to="/forgotpass">Forgotpassword?</Link>
     </div>
   );
 };
