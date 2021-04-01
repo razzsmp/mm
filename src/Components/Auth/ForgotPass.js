@@ -1,26 +1,22 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-const Register = props => {
+const forgotpass = props => {
 	const [email, setEmail] = useState("");
-	const [password, setPassword] = useState("");
-	const [username, setUsername] = useState("");
 	const [errors, setErrors] = useState([]);
 
 	const handleSubmit = event => {
 		event.preventDefault();
 		if (isValid()) {
-			props.register(email, password, username);
+			props.register(email);
 		} else {
 		}
 	};
 
 	const isValid = () => {
 		const emailRegex = /[a-zA-Z0-9]{4,}@[a-zA-Z0-9]{3,}\.[a-zA-Z]{1,10}/gi;
-		const passwordRegex = /[a-zA-Z0-9*%#@!]{6,32}/gi;
 		const errors = [];
 		if (!emailRegex.exec(email)) errors.push("email");
-		if (!passwordRegex.exec(password)) errors.push("password");
 		setErrors(errors);
 		return errors.length === 0;
 	};
