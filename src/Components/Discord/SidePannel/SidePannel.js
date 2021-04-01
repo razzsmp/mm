@@ -47,6 +47,33 @@ class SidePannel extends React.Component {
 		);
 	};
 
+ invitetoserver = (id) => {
+    this.setState({ loginError: null });
+    firebase
+      .database()
+      .ref("servers")
+      .child(id)
+      .once("value", snap => {
+        if (snap.val()) {
+          firebase
+            .database()
+            .ref("servers/")
+            .child(id + "/users/" + props.user.uid)
+            .set({
+              name: props.user.displayName,
+              photo: props.user.photoURL,
+              role: "normal",
+              uid: props.user.uid
+            });
+          firebase
+            .database()
+            .ref("users")
+            .child(props.user.uid + "/servers/" + id)
+            .set({ id });
+        }
+      })
+  };
+
 	createServer = (name, url) => {
 		this.setState({ createStatus: "creating Server" });
 		//create server in database with url and name
@@ -149,6 +176,16 @@ class SidePannel extends React.Component {
 				{this.state.showModal ? (
 					<AddModal
 						create="Server"
+						show={this.setState.showModal}
+						onClick={this.handleCreateServer}
+						handleClose={() => this.setState({ showModal: false })}
+						status={this.state.createStatus}
+						percentage={this.state.percentage}
+					/>
+				) : null}
+				{this.state.showModal ? (
+					<invitetoserver
+						create="Join"
 						show={this.setState.showModal}
 						onClick={this.handleCreateServer}
 						handleClose={() => this.setState({ showModal: false })}
