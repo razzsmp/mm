@@ -2,7 +2,6 @@ import React from "react";
 import Server, { Switch, Add } from "./Server";
 import "./SidePannel.scss";
 import AddModal from "../AddModal/AddModal";
-import JoinModal from "../AddModal/joinmodal"
 import uuidv4 from "uuid/v4";
 
 class SidePannel extends React.Component {
