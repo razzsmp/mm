@@ -80,9 +80,11 @@ class Auth extends React.Component {
                 </Route>
                 <Route path="/login">
                   <Login login={this.login} error={this.state.loginError} />
-                </Route>
-                <Route path="/forgot-password">
-                  <Login login={this.Forgotpass} error={this.state.forgotpassError} />
+                <Route exact path="/forgotpass">
+                  <Forgotpass
+                    forgotpass={this.forgotpass}
+                    error={this.state.registerError}
+                  />
                 </Route>
               </Switch>
             </CSSTransition>
