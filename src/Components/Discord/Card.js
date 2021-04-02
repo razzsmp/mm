@@ -10,10 +10,22 @@ const Card = props => {
       <div className="grp">
         <h2>{props.header}</h2>
         <div
-          className={props.joined ? "joined-btn btn" : "join-btn btn"}
-          onClick={props.onClick}
+         <label
+          style={{ color: errors.includes("password") ? "#d72323" : "white" }}
         >
-          {props.joined ? "Joined" : "Join"}
+          PASSWORD
+        </label>
+        <input
+          type="password"
+          autoComplete="password"
+          value={password}
+          onChange={e => setPassword(e.target.value)}
+          style={{
+            borderColor: errors.includes("password")
+              ? "#d72323"
+              : "rgba(0,0,0,0.2)"
+          }}
+        />
         </div>
       </div>
     </div>
