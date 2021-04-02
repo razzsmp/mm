@@ -42,6 +42,5 @@ class UserPannel extends React.Component {
 				</div>
 		);
 	}
-}
 
 export default UserPannel;
