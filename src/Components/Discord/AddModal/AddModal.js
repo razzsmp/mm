@@ -118,45 +118,6 @@ const AddModal = props => {
 				</form>
 			</div>
 		</div>
-		<div className="bg" onClick={closeModalOnBgClick}>
-			<div className="addmodal">
-				<h2>{`Create ${props.create}`}</h2>
-				<div className="errors">
-					{errors
-						? errors.map((err, i) => <span key={i + Math.random()}>{err}</span>)
-						: null}
-				</div>
-				<form>
-					{props.create === "Server" ? fileInput : ""}
-					{props.options ? selectInput() : ""}
-					<input
-						type="text"
-						placeholder={`${props.create} name`}
-						value={name}
-						onChange={handleNameChange}
-						style={{ marginBottom: "15rem" }}
-					/>
-					{/* check wether we're uploading or not */}
-					{!props.status ? (
-						<div className="button-group">
-							<button type="button" onClick={() => props.handleClose(false)}>
-								Cancel
-							</button>
-							<button type="submit" onClick={handleSubmit}>
-								Create
-							</button>
-						</div>
-					) : (
-						<div className="status-bar">
-							<div className="status">{props.status}</div>
-							{/* <div className="bar">
-                {props.status === "uploading icon..." ? props.percentage : ""}
-              </div> */}
-						</div>
-					)}
-				</form>
-			</div>
-		</div>
 	);
 };
 
