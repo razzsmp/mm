@@ -25,7 +25,6 @@ class Channels extends React.Component {
 
 		return categories.map(category => {
 			const isAdmin = this.props.userRole.isAdmin;
-			const isOwner = this.props.user.uid
 			const channels = this.objToArray(category.channels);
 			return (
 				<div className="category" key={category.key}>
