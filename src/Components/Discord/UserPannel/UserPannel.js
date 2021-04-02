@@ -40,7 +40,21 @@ class UserPannel extends React.Component {
 				>
 					<span className="server-icon"></span>Join-Server
 				</div>
+
+				<div
+					className={
+						this.props.selectedDM === "activity" ? "active item" : "item"
+					}
+					onClick={() => this.changeSelected("activity")}
+				>
+					<span className="activity-icon"></span>activity
+				</div>
+
+				<h3>DIRECT MESSAGE</h3>
+				{this.displayDms(this.props.dms)}
+			</div>
 		);
 	}
+}
 
 export default UserPannel;
