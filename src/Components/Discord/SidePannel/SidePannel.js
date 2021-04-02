@@ -57,7 +57,7 @@ class SidePannel extends React.Component {
 				name,
 				url,
 				id: key,
-			        ownerid: this.props.user.uid
+			        ownerid: this.props.user.uid,
 				roles: {
 					admin: {
 						isAdmin: true,
