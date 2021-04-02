@@ -118,7 +118,6 @@ const AddModal = props => {
 				</form>
 			</div>
 		</div>
-	return (
 		<div className="bg" onClick={closeModalOnBgClick}>
 			<div className="addmodal">
 				<h2>{`Create ${props.create}`}</h2>
