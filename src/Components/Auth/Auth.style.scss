@@ -75,9 +75,6 @@
       background-color: rgba(0, 0, 0, 0.1);
       outline: none;
       color: #fff;
-      &:hover {
-        border: 1px solid #000;
-      }
     }
     a {
       color: #7289da;
@@ -96,9 +93,6 @@
       color: #fff;
       font-size: 1.6rem;
       cursor: pointer;
-      &:hover {
-        background-color: #5b70bb;
-      }
     }
     .error {
       text-align: center;
