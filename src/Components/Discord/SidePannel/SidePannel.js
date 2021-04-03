@@ -124,15 +124,6 @@ class SidePannel extends React.Component {
 			/>
 		));
 	};
-componentDidMount () {
-    this.scrollToBottom()
-  }
-  componentDidUpdate () {
-    this.scrollToBottom()
-  }
-  scrollToBottom = () => {
-    this.messagesEnd.current.scrollIntoView({ behavior: 'smooth' })
-  }
 
 	render() {
 		const { selectedServer, joinedServers } = this.props;
