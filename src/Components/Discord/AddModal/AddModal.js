@@ -95,7 +95,11 @@ const AddModal = props => {
 						placeholder={`${props.create} name`}
 						value={name}
 						onChange={handleNameChange}
-						style={{ marginBottom: "15rem" }}
+						style={{
+                                                   borderColor: errors.includes("password")
+                                                   ? "#d72323"
+                                                   : "rgba(0,0,0,0.2)"
+                                               }}
 					/>
 					{/* check wether we're uploading or not */}
 					{!props.status ? (
