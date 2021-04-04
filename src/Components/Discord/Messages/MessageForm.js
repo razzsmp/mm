@@ -139,7 +139,7 @@ const MessageForm = props => {
 					value={message}
 					onChange={e => setMessage(e.target.value)}
 					onKeyPress={e => handleKeyDown(e)}
-					placeholder={`#{channel} message `}
+					placeholder={this.channel`# message `}
 					autoFocus
 					ref={ref => (inputRef = ref)}
 				/>
