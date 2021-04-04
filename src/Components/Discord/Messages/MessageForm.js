@@ -122,7 +122,7 @@ const MessageForm = props => {
 			.push()
 			.set(message);
 	};
-const { channelId } = this.props;
+const { channelId } = this.server;
 	return (
 		<div
 			className="messageform"
