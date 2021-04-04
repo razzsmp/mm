@@ -55,7 +55,7 @@
 				}
 			}
 			label {
-				display: block;
+				display: flex;
 				border-radius: 50%;
 				background: url(https://www.freepnglogos.com/uploads/discord-logo-png/discord-logo-logodownload-download-logotipos-1.png);
 				background-position: center;
@@ -78,8 +78,8 @@
 			}
 
 			button {
-				display: inline-block;
-				width: 40%;
+				display: flex;
+				width: auto;
 				padding: 0.8rem;
 				background-color: #00e673;
 				color: #fff;
