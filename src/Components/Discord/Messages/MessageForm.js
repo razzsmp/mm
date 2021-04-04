@@ -139,7 +139,7 @@ const { channelId } = props.server;
 					value={message}
 					onChange={e => setMessage(e.target.value)}
 					onKeyPress={e => handleKeyDown(e)}
-					placeholder={channelId `# message `}
+					placeholder={channelId}
 					autoFocus
 					ref={ref => (inputRef = ref)}
 				/>
