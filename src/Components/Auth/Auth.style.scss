@@ -19,14 +19,12 @@
 }
 
 .auth {
-  width: 100vw;
-  height: 100vh;
   display: flex;
+  background-color: rgba(52,52,52,1);
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
-  background: url("../../Assets/img/auth-bg.jpg");
-  background-position: center;
-  background-size: cover;
+  height: 100vh;
+  width: 100vw;
   .wrapper {
     width: 45rem;
     min-height: 50vh;
