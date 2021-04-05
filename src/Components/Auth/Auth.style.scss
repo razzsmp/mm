@@ -69,10 +69,9 @@
       font-style: normal;
       font-weight: 400;
       color: #121212;
-      height: auto;
+      height: 45px;
       font-size: 20px;
-      width: 338px;
-      border-radius: 10px;
+      width: 339px;
       border: none;
       background: transparent;
     }
@@ -101,7 +100,12 @@
   }
   .login {
     h2 {
-      margin-bottom: 1rem;
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: 700;
+      color: rgba(253,252,252,1);
+      font-size: 40px;
+      align-self: flex-end;
     }
   }
 }
