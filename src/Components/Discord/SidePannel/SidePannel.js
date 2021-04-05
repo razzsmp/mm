@@ -129,7 +129,6 @@ class SidePannel extends React.Component {
 		const { selectedServer, joinedServers } = this.props;
 		return (
 			<div className="sidepannel">
-			<div style="overflow:auto; height:556px;width:564px;"></div> 
 				<Switch
 					active={selectedServer === null}
 					url="https://www.jimhub.gq/logo512.png"
