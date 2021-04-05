@@ -63,10 +63,10 @@
 			}
 		}
 		h3 {
-			display: flex;
+			display: block;
 			justify-content: space-between;
 			span {
-				display: none;
+				display: bold;
 				cursor: pointer;
 				opacity: 0.7;
 				margin-right: 1rem;
@@ -79,7 +79,7 @@
 	.active {
 		background-color: var(--color-4) !important;
 	}
-	.channel {
+		.channel {
 		// background-color: var(--color-4);
 		width: 85%;
 		margin: 0.3rem auto;
