@@ -60,120 +60,6 @@ class Auth extends React.Component {
       })
       .catch(e => this.setState({ registerError: e }));
   };
-
-import React, { Component } from "react";
-import {
-  StyleSheet,
-  View,
-  Text,
-  TextInput,
-  TouchableOpacity
-} from "react-native";
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "rgba(52,52,52,1)",
-    justifyContent: "center"
-  },
-  rect: {
-    width: 454,
-    height: 490,
-    backgroundColor: "rgba(105,105,105,1)",
-    borderRadius: 32,
-    alignSelf: "center"
-  },
-  email: {
-    fontFamily: "roboto-regular",
-    color: "rgba(255,255,255,1)",
-    height: 37,
-    width: 119,
-    fontSize: 30
-  },
-  rect4: {
-    width: 338,
-    height: 73,
-    backgroundColor: "rgba(105,105,105,1)",
-    borderWidth: 1,
-    borderColor: "#000000",
-    borderRadius: 10
-  },
-  textInput: {
-    fontFamily: "roboto-regular",
-    color: "#121212",
-    height: 73,
-    fontSize: 50,
-    width: 338,
-    borderRadius: 10
-  },
-  password: {
-    fontFamily: "roboto-regular",
-    color: "rgba(255,255,255,1)",
-    height: 37,
-    width: 139,
-    fontSize: 30,
-    marginTop: 6
-  },
-  rect3: {
-    width: 338,
-    height: 73,
-    backgroundColor: "rgba(105,105,105,1)",
-    borderWidth: 1,
-    borderColor: "#000000",
-    borderRadius: 10
-  },
-  textInput2: {
-    fontFamily: "roboto-regular",
-    color: "#121212",
-    height: 73,
-    fontSize: 50,
-    width: 338,
-    borderRadius: 10
-  },
-  button: {
-    top: 0,
-    left: 0,
-    width: 342,
-    height: 74,
-    position: "absolute",
-    backgroundColor: "rgba(114,137,217,1)",
-    borderRadius: 14
-  },
-  login: {
-    top: 20,
-    left: 119,
-    position: "absolute",
-    fontFamily: "roboto-700",
-    color: "rgba(255,255,255,1)",
-    height: 37,
-    width: 229,
-    fontSize: 30
-  },
-  buttonStack: {
-    width: 348,
-    height: 74,
-    marginTop: 26
-  },
-  emailColumn: {
-    width: 348,
-    marginTop: 135,
-    marginLeft: 58
-  },
-  emailColumnFiller: {
-    flex: 1
-  },
-  welcomeBack: {
-    fontFamily: "roboto-700",
-    color: "rgba(253,252,252,1)",
-    fontSize: 50,
-    alignSelf: "flex-end",
-    marginBottom: 375,
-    marginRight: 54
-  }
-});
-
-export default Untitled2;
-
   render() {
     return (
       <div className="auth">
@@ -186,7 +72,7 @@ export default Untitled2;
             >
               <Switch>
                 <Route exact path="/register">
-                  <style.register
+                  <Register
                     register={this.register}
                     error={this.state.registerError}
                   />
