@@ -65,14 +65,16 @@
       opacity: 0.7;
     }
     input {
-      margin-bottom: 2rem;
-      padding: 1rem;
-      border: 1px solid rgba(0, 0, 0, 0.3);
-      display: block;
-      width: 100%;
-      background-color: rgba(0, 0, 0, 0.1);
-      outline: none;
-      color: #fff;
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: 400;
+      color: #121212;
+      height: 73px;
+      font-size: 50px;
+      width: 338px;
+      border-radius: 10px;
+      border: none;
+      background: transparent;
     }
     a {
       color: #7289da;
