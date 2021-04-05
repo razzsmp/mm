@@ -21,6 +21,9 @@ class SidePannel extends React.Component {
 		this.uploadFile(file, name);
 		//after icon uploaded its gonna call createServer with url
 	};
+        componentDidUpdate() {
+		this.scrollToBottom();
+	}
 	uploadFile = (file, name) => {
 		const path = uuidv4(); //generate unique filename
 		const task = this.storage.child(path + ".jpg").put(file); //upload it to storage
