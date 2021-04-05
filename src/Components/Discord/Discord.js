@@ -49,7 +49,7 @@ class Discord extends Component {
 		} = this.props;
 		return (
 			<div className="discord">
-				<SidePannel
+				<SidePannel style="overflow:auto; height:556px;width:564px;"
 					selectedServer={server}
 					changeCurrentSelected={this.changeCurrentSelected}
 					firebase={firebase}
