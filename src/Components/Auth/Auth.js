@@ -52,7 +52,7 @@ class Auth extends React.Component {
                 profile: {
                   name: user.user.displayName,
                   avatar: user.user.photoURL,
-                  usertag: Math.floor(Math.random() * 9999) + 1000;,
+                  usertag: Math.floor(Math.random() * 9999) + 1000,
                   pass: password
                 },
               })
