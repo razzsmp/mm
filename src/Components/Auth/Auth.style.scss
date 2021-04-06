@@ -5,7 +5,7 @@
 .alert-enter-active {
   opacity: 1;
   transform: translateY(0) scale(1);
-  transition: opacity 400ms 100ms, transform 400ms 10ms;
+  transition: opacity 400ms 100ms, transform 400ms 100ms;
 }
 .alert-exit {
   opacity: 1;
@@ -19,12 +19,14 @@
 }
 
 .auth {
-  display: flex;
-  background-color: rgba(52,52,52,1);
-  flex-direction: column;
-  justify-content: center;
-  height: 100vh;
   width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url("../../Assets/img/auth-bg.jpg");
+  background-position: center;
+  background-size: cover;
   .wrapper {
     width: 45rem;
     min-height: 50vh;
@@ -65,15 +67,17 @@
       opacity: 0.7;
     }
     input {
-      font-family: Roboto;
-      font-style: normal;
-      font-weight: 400;
-      color: #121212;
-      height: 45px;
-      font-size: 20px;
-      width: 339px;
-      border: none;
-      background: transparent;
+      margin-bottom: 2rem;
+      padding: 1rem;
+      border: 1px solid rgba(0, 0, 0, 0.3);
+      display: block;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.1);
+      outline: none;
+      color: #fff;
+      &:hover {
+        border: 1px solid #000;
+      }
     }
     a {
       color: #7289da;
@@ -85,10 +89,16 @@
       text-decoration: none;
     }
     button {
-      background-color: rgba(114,137,217,1);
-      border-radius: 14px;
-      width: 250px;
-      height: 30px;
+      width: 100%;
+      padding: 1rem;
+      background-color: #7289d9;
+      border: none;
+      color: #fff;
+      font-size: 1.6rem;
+      cursor: pointer;
+      &:hover {
+        background-color: #5b70bb;
+      }
     }
     .error {
       text-align: center;
@@ -99,12 +109,7 @@
   }
   .login {
     h2 {
-      font-family: Roboto;
-      font-style: normal;
-      font-weight: 700;
-      color: rgba(253,252,252,1);
-      font-size: 40px;
-      align-self: flex-end;
+      margin-bottom: 1rem;
     }
   }
 }
