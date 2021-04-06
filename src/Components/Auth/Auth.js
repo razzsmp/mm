@@ -16,11 +16,6 @@ class Auth extends React.Component {
   };
   componentDidMount() {}
 
-function between(min, max) {  
-  return Math.floor(
-    Math.random() * (max - min) + min
-  )
-}
 
 
 
@@ -57,7 +52,7 @@ function between(min, max) {
                 profile: {
                   name: user.user.displayName,
                   avatar: user.user.photoURL,
-                  usertag: between(0001, 9999),
+                  usertag: Math.floor(Math.random() * 9999) + 1000;,
                   pass: password
                 },
               })
