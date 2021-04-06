@@ -2,12 +2,13 @@
 	position: absolute;
 	top: 0;
 	left: 0;
-	width: 100vw;
-	height: 100vh;
-	background-color: rgba(0, 0, 0, 0.5);
-	display: flex;
-	justify-content: center;
-	align-items: center;
+	background-color: rgba(54,57,63,1);
+        border-width: 1px;
+        border-color: rgba(82,85,93,1);
+        border-radius: 34px;
+        width: 35rem;
+        height: 40rem;
+        border-style: solid;
 	z-index: 4;
 
 	.addmodal {
