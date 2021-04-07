@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import styled, { css } from "styled-components";
 import { Link } from "react-router-dom";
 
-function Untitled(props) {
+function Spinner(props) {
   return (
     <Container>
       <Image src={require("./logo512.png")}></Image>
