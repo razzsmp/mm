@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 function Untitled(props) {
   return (
     <Container>
-      <Image src={require("../assets/images/logo512.png")}></Image>
+      <Image src={require("./logo512.png")}></Image>
       <Link to="https://stats.jimhub.gq/">
         <Button>
           <ButtonOverlay></ButtonOverlay>
