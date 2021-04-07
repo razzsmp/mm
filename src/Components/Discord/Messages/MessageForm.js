@@ -14,6 +14,7 @@ const MessageForm = props => {
 	const [showEmojiPicker, setShowEmojiPicker] = useState(false);
 	const [showGiphyPicker, setShowGiphyPicker] = useState(false);
 	let inputRef = null;
+	const {content, limit} = this.props;
 
 	const createMessage = (message, isTextMessage) => {
 		if (props.server) {
@@ -124,6 +125,11 @@ const MessageForm = props => {
 	};
 const { channelId } = props.server;
 	return (
+		const {content, limit} = this.props;
+		  if(content.length<=limit) {
+                  // there is nothing more to show
+                 return <div>{content}<div>
+	}
 		<div
 			className="messageform"
 			style={{ width: props.server ? "65%" : "81%" }}
