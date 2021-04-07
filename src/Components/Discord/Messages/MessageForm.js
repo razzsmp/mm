@@ -125,11 +125,6 @@ const MessageForm = props => {
 	};
 const { channelId } = props.server;
 	return (
-		const {content, limit} = this.props;
-		  if(content.length<=limit) {
-                  // there is nothing more to show
-                 return <div>{content}<div>
-	}
 		<div
 			className="messageform"
 			style={{ width: props.server ? "65%" : "81%" }}
