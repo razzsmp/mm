@@ -14,7 +14,6 @@ const MessageForm = props => {
 	const [showEmojiPicker, setShowEmojiPicker] = useState(false);
 	const [showGiphyPicker, setShowGiphyPicker] = useState(false);
 	let inputRef = null;
-	const {content, limit} = this.props;
 
 	const createMessage = (message, isTextMessage) => {
 		if (props.server) {
@@ -123,7 +122,7 @@ const MessageForm = props => {
 			.push()
 			.set(message);
 	};
-const { channelId } = props.server;
+
 	return (
 		<div
 			className="messageform"
@@ -140,7 +139,7 @@ const { channelId } = props.server;
 					value={message}
 					onChange={e => setMessage(e.target.value)}
 					onKeyPress={e => handleKeyDown(e)}
-					placeholder={channelId}
+					placeholder={`# message `}
 					autoFocus
 					ref={ref => (inputRef = ref)}
 				/>
