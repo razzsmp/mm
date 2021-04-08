@@ -1,54 +1,58 @@
-import React, { Component } from "react";
-import styled, { css } from "styled-components";
-import { Link } from "react-router-dom";
+import React from "react";
+import styled, { keyframes } from "styled-components";
 
-function Spinner(props) {
-  return (
-    <Container>
-      <Image src={require("./logo512.png")}></Image>
-      <Link to="https://stats.jimhub.gq/">
-        <Button>
-          <ButtonOverlay></ButtonOverlay>
-        </Button>
-      </Link>
-    </Container>
-  );
-}
-
-const Container = styled.div`
-  display: flex;
-  background-color: rgba(32,31,31,1);
-  border-width: 1px;
-  border-color: #000000;
-  flex-direction: column;
-  border-style: solid;
-  height: 100vh;
-  width: 100vw;
+const spin = keyframes`
+    from {transform: rotate(0deg)}
+    to {transform: rotate(360deg)}
 `;
 
-const ButtonOverlay = styled.button`
- display: block;
- background: none;
- height: 100%;
- width: 100%;
- border:none
- `;
-const Image = styled.img`
-  width: 200px;
+const Spinner = styled.div`
+  position: absolute;
+  height: 60px;
+  width: 60px;
+  border: 3px solid transparent;
+  border-top-color: #a04668;
+  top: 50%;
+  left: 50%;
+  margin: -30px;
+  border-radius: 50%;
+  animation: ${spin} 2s linear infinite;
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    border: 3px solid transparent;
+    border-radius: 50%;
+  }
+  &:before {
+    border-top-color: #254e70;
+    top: -12px;
+    left: -12px;
+    right: -12px;
+    bottom: -12px;
+    animation: ${spin} 3s linear infinite;
+  }
+  &:after {
+    border-top-color: #f3f169;
+    top: 6px;
+    left: 6px;
+    right: 6px;
+    bottom: 6px;
+    animation: ${spin} 4s linear infinite;
+  }
+`;
+
+const Wrapper = styled.div`
+  position: relative;
+  width: 100%;
   height: 100%;
-  margin-top: 299px;
-  align-self: center;
-  object-fit: contain;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
-const Button = styled.div`
-  width: 80px;
-  height: 48px;
-  background-color: rgba(81,102,240,1);
-  border-radius: 9px;
-  margin-top: 74px;
-  margin-left: 593px;
-  border: none;
-`;
-
-export default Spinner;
+export default () => (
+  <Wrapper>
+    <Spinner />
+  </Wrapper>
+);
