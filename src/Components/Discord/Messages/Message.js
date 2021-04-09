@@ -88,7 +88,7 @@ const Message = props => {
 							style={{ color: color }}
 							onClick={() => setShowDMCard(!showDMCard)}
 						>
-							{message.sender.uid === uid ? "You" : message.sender.name}
+							{message.sender.name}
 							{showDMCard ? (
 								<DMCard
 									name={message.sender.name}
