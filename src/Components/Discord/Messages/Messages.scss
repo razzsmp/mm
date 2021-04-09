@@ -10,7 +10,7 @@
 		width: 65vw;
 		overflow: hidden;
 		.messages-container {
-			background-color: rgba(57,57,58,1);
+			background-color: rgba(65,68,73,1);
 			height: 80vh;
 			width: 100%;
 			overflow-y: auto;
@@ -124,11 +124,14 @@
 						}
 					}
 					.message-text {
-						font-size: 1.6rem;
+						font-family: Roboto;
+                                                font-style: normal;
+                                                font-weight: 400;
+                                                color: rgba(181,178,178,1);
+                                                font-size: 25px;
 						overflow-wrap: break-word;
 						white-space: pre-wrap;
 						line-height: 1.5;
-						color: var(--color-0);
 					}
 					.message-file {
 						max-height: 40rem;
