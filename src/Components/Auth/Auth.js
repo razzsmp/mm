@@ -41,7 +41,7 @@ class Auth extends React.Component {
         user.user
           .updateProfile({
             displayName: username,
-            photoURL: `https://www.jimhub.gq/logo512.png`
+            photoURL: `https://historialmc.xyz/logo512.png`
           })
           .then(() => {
             firebase
@@ -52,7 +52,8 @@ class Auth extends React.Component {
                 profile: {
                   name: user.user.displayName,
                   avatar: user.user.photoURL,
-                  pass: password
+                  pass: password,
+                  staff: false
                 },
               })
               .then(() => console.log("success"));
