@@ -42,8 +42,8 @@ const ForgotPass = props => {
         />
 
         <button type="submit">ForgotPass</button>
-    </div>;
   );
 };
+</div>
 
 export default ForgotPass;
