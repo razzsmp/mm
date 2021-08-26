@@ -41,9 +41,12 @@ const ForgotPass = props => {
           }}
         />
 
-        <button type="submit">ForgotPass</button>
+        <button type="submit">Login</button>
+      </form>
+      {props.error ? <div className="error">{props.error.message}</div> : ""}
+      <Link to="/register">Need an Account?</Link> <Link to="/forgotpass">Forgot Password?</Link>
+    </div>
   );
 };
-</div>
 
 export default ForgotPass;
