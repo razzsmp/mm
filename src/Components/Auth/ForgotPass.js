@@ -42,7 +42,6 @@ const Login = props => {
         />
 
         <button type="submit">Login</button>
-    </div>
   );
 };
 
