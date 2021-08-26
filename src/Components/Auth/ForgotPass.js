@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-const Login = props => {
+const ForgotPass = props => {
   const [email, setEmail] = useState("");
   const [errors, setErrors] = useState([]);
 
   const handleSubmit = event => {
     event.preventDefault();
     if (isValid()) {
-      props.forgot(email);
+      props.ForgotPass(email);
     }
   };
 
@@ -41,7 +41,7 @@ const Login = props => {
           }}
         />
 
-        <button type="submit">Login</button>
+        <button type="submit">ForgotPass</button></div>
   );
 };
 
