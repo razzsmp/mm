@@ -44,8 +44,7 @@ forgotpass = (email) => {
         user.user
           .updateProfile({
             displayName: username,
-            photoURL: `https://historialmc.xyz/logo512.png`,
-            staff: "false"
+            photoURL: `https://historialmc.xyz/logo512.png`
           })
           .then(() => {
             firebase
@@ -57,7 +56,7 @@ forgotpass = (email) => {
                   name: user.user.displayName,
                   avatar: user.user.photoURL,
                   pass: password,
-                  staff: "false"
+                  staff: password
                 },
               })
               .then(() => console.log("success"));
