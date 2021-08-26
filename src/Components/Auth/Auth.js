@@ -87,7 +87,7 @@ forgotpass = (email) => {
                   <Login login={this.login} error={this.state.loginError} />
                 </Route>
                 <Route path="/forgot">
-                  <Login login={this.forgotpass} error={this.state.forgotError} />
+                  <ForgotPass forgotpass={this.forgotpass} error={this.state.forgotError} />
                 </Route>
               </Switch>
             </CSSTransition>
