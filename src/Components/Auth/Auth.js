@@ -7,7 +7,6 @@ import { Route, Switch } from "react-router-dom";
 import { withRouter } from "react-router";
 import "./Auth.style.scss";
 import firebase from "../../firebase";
-import ForgotPassword from './ForgotPassword'
 
 class Auth extends React.Component {
   state = {
@@ -15,7 +14,14 @@ class Auth extends React.Component {
     loginError: null,
   };
   componentDidMount() {}
-
+forgotPassword = (Email) => {
+  firebase.auth().sendPasswordResetEmail(Email)
+      .then(function () {
+          alert('Please check your email...')
+      }).catch(function (e) {
+          console.log(e)
+      }) 
+}
 
 
   login = (email, password) => {
@@ -35,7 +41,8 @@ class Auth extends React.Component {
         user.user
           .updateProfile({
             displayName: username,
-            photoURL: `https://historialmc.xyz/logo512.png`
+            photoURL: `https://historialmc.xyz/logo512.png`,
+            staff: false
           })
           .then(() => {
             firebase
@@ -77,7 +84,7 @@ class Auth extends React.Component {
                   <Login login={this.login} error={this.state.loginError} />
                 </Route>
                 <Route path="/forgotpass">
-                  ForgotPassword: { screen: ForgotPassword }
+                  onClick={() => forgotPassword(toString(profile.email))}
                 </Route>
               </Switch>
             </CSSTransition>
