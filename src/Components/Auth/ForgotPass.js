@@ -41,7 +41,8 @@ const ForgotPass = props => {
           }}
         />
 
-        <button type="submit">ForgotPass</button></div>
+        <button type="submit">ForgotPass</button>
+    </div>;
   );
 };
 
