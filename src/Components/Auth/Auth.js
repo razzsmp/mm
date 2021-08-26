@@ -16,9 +16,9 @@ class Auth extends React.Component {
   };
   componentDidMount() {}
   
-ForgotPass = (Email) => {
+forgotpass = (email) => {
   this.setState({ forgotError: null });
-  firebase.auth().sendPasswordResetEmail(Email)
+  firebase.auth().sendPasswordResetEmail(email)
       .then(function () {
           alert('Please check your email...')
       }).catch(function (e) {
@@ -87,7 +87,7 @@ ForgotPass = (Email) => {
                   <Login login={this.login} error={this.state.loginError} />
                 </Route>
                 <Route path="/forgot">
-                  <Login login={this.ForgotPass} error={this.state.forgotError} />
+                  <Login login={this.forgotpass} error={this.state.forgotError} />
                 </Route>
               </Switch>
             </CSSTransition>
