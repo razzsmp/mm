@@ -7,23 +7,17 @@ import { Route, Switch } from "react-router-dom";
 import { withRouter } from "react-router";
 import "./Auth.style.scss";
 import firebase from "../../firebase";
+import ForgotPassword from './ForgotPassword'
 
 class Auth extends React.Component {
   state = {
     registerError: null,
     loginError: null,
-    forgotpassError: null
   };
   componentDidMount() {}
 
 
 
-
-  forgotpass = (email) => {
-    this.setState({ forgotpassError: null });
-    firebase
-      .sendPasswordResetEmail(email)
-  }
   login = (email, password) => {
     this.setState({ loginError: null });
     firebase
@@ -83,7 +77,7 @@ class Auth extends React.Component {
                   <Login login={this.login} error={this.state.loginError} />
                 </Route>
                 <Route path="/forgotpass">
-                  <Forgotpassword forgotpass={this.forgotpass} error={this.state.forgotpassError} />
+                  ForgotPassword: { screen: ForgotPassword }
                 </Route>
               </Switch>
             </CSSTransition>
