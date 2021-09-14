@@ -13,8 +13,8 @@ const Message = props => {
 	const [showDMCard, setShowDMCard] = useState(false);
 	const { id, message, uid, color, scrollToBottom, path } = props;
 
-	const isTextMessage = message => {
-		useSound(boopSfx);
+	const isTextMessage = (message, useSound, pingsound) => {
+		useSound(pingsound);
 		return message.text;
 	};
 
