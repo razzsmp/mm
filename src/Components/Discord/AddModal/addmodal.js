@@ -49,7 +49,7 @@ const AddModal = props => {
 					backgroundImage: `url(${
 						file
 							? URL.createObjectURL(file)
-							: "https://www.jimhub.gq/logo512.png"
+							: "https://historialmc.xyz/server.png"
 					})`
 				}}
 			></label>
