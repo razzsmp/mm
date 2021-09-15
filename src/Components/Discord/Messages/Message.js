@@ -3,8 +3,6 @@ import moment from "moment";
 import { Picker as EmojiPicker } from "emoji-mart";
 import firebase from "../../../firebase";
 import DMCard from "./DMCard/DMCard";
-import useSound from 'use-sound';
-import pingsound from './ping.mp3';
 
 const Message = props => {
 	const [showOptions, setShowOptions] = useState(false);
@@ -13,8 +11,7 @@ const Message = props => {
 	const [showDMCard, setShowDMCard] = useState(false);
 	const { id, message, uid, color, scrollToBottom, path } = props;
 
-	const isTextMessage = (message, useSound, pingsound) => {
-		useSound(pingsound);
+	const isTextMessage = (message) => {
 		return message.text;
 	};
 
