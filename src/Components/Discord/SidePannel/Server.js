@@ -4,6 +4,7 @@ const Server = styled.div`
 	width: 5rem;
 	height: 5rem;
 	background: ${props => `url(${props.url})`};
+	border: 5px solid #36393f;
 	background-size: cover;
 	background-position: center;
 	border-radius: ${props => (props.active ? "25%" : "50%")};
