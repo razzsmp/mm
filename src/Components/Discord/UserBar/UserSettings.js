@@ -12,7 +12,7 @@ const UserSettings = props => {
 		if (e.target.classList.contains("user-settings-bg")) props.close();
 	};
 	
-	const signOutUser = firebase.auth.signOut();
+	signOutUser = firebase.auth.signOut();
 
 	return (
 		<div className="user-settings-bg" onClick={handleClose}>
