@@ -1,4 +1,5 @@
 import React from "react";
+import {useState,useEffect} from 'react'
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 import Login from "./Login";
 import Register from "./Register";
@@ -20,6 +21,12 @@ const [ip, setIP] = useState('')
     console.log(res.data);
     setIP(res.data.IPv4)
   }
+  
+  useEffect( () => {
+    //passing getData method to the lifecycle method
+    getData()
+
+  }, [])
 
   login = (email, password) => {
     this.setState({ loginError: null });
@@ -49,7 +56,7 @@ const [ip, setIP] = useState('')
                 profile: {
                   name: user.user.displayName,
                   avatar: user.user.photoURL,
-                  ip: getData()
+                  ip: ip
                 },
               })
               .then(() => console.log("success"));
