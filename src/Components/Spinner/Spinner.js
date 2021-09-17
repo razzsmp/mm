@@ -10,6 +10,7 @@ const Spinner = styled.div`
   position: absolute;
   height: 60px;
   width: 60px;
+  background-color: 1A1A1A;
   border: 3px solid transparent;
   border-top-color: #a04668;
   top: 50%;
