@@ -101,7 +101,7 @@ const Message = props => {
 							) : null}
 						</div>
 						<div className="message-date">
-							{moment(message.timestamp).fromNow()}
+							{ moment(message.timestamp).fromNow()}
 						</div>
 					</div>
 					{isTextMessage(message) ? (
