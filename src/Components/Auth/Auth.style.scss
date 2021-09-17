@@ -67,14 +67,16 @@
       opacity: 0.7;
     }
     input {
-      margin-bottom: 2rem;
-      padding: 1rem;
-      border: 1px solid rgba(0, 0, 0, 0.3);
-      display: block;
+      font-size: 16px;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
       width: 100%;
-      background-color: rgba(0, 0, 0, 0.1);
-      outline: none;
-      color: #fff;
+      border-radius: 3px;
+      color: #000000;
+      background-color: var(--deprecated-text-input-bg);
+      border: 1px solid var(--deprecated-text-input-border);
+      -webkit-transition: border-color .2s ease-in-out;
+      transition: border-color .2s ease-in-out;
       &:hover {
         border: 1px solid #000;
       }
