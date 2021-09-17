@@ -5,7 +5,7 @@ import Register from "./Register";
 import { Route, Switch } from "react-router-dom";
 import { withRouter } from "react-router";
 import "./Auth.style.scss";
-import firebase from "../../firebase";
+import firebase from "../../../../firebase";
 
 class Auth extends React.Component {
   state = {
