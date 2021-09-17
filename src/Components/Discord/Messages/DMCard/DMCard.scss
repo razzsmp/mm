@@ -1,14 +1,11 @@
 .dmcard {
-	position: absolute;
-	top: 0;
-	padding: 2rem;
-	z-index: 5;
-	background-color: var(--color-6);
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	color: var(--color-0);
-	opacity: 1;
+	backgroundColor: "rgba(35,38,43,1)",
+	borderWidth: 1,
+	borderColor: "#000000",
+	borderRadius: 15,
+	width: 384,
+	height: 420,
+}
 
 	.dmcard-header {
 		display: flex;
@@ -25,7 +22,9 @@
 		background-position: center;
 	}
 	.name {
-		font-size: 2rem;
+		fontFamily: "roboto-700",
+		color: "rgba(255,255,255,1)",
+		textAlign: "center",
 	}
 	.role-wrapper {
 		margin: 2rem;
@@ -39,6 +38,11 @@
 		}
 	}
 	textarea {
-		resize: none;
+		ontFamily: "roboto-regular",
+		color: "rgba(0,0,0,1)",
+		backgroundColor: "rgba(230, 230, 230,1)",
+		borderWidth: 1,
+		borderColor: "#000000",
+		borderRadius: 12,
 	}
 }
