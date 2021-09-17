@@ -38,7 +38,7 @@ const UserSettings = props => {
 				<div className="update-btn" onClick={handleSubmit}>
 					{props.uploading ? "Updating" : "Update"}
 				</div>
-                                <div className="logout" onClick={this.signOutUser()}>
+                                <div className="logout" onClick={signOutUser()}>
 				</div>
 			</div>
 		</div>
