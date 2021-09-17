@@ -1,5 +1,4 @@
 import React from "react";
-import {useState,useEffect} from 'react'
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 import Login from "./Login";
 import Register from "./Register";
