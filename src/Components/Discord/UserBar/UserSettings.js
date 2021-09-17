@@ -12,7 +12,9 @@ const UserSettings = props => {
 		if (e.target.classList.contains("user-settings-bg")) props.close();
 	};
 	
-	const signOutUser = firebase.auth.signOut();
+	const logout = () => {
+		firebase.signOut();
+	};
 
 	return (
 		<div className="user-settings-bg" onClick={handleClose}>
@@ -38,7 +40,7 @@ const UserSettings = props => {
 				<div className="update-btn" onClick={handleSubmit}>
 					{props.uploading ? "Updating" : "Update"}
 				</div>
-                                <div className="logout" onClick={signOutUser()}>
+                                <div className="logout" onClick={logout}>
 				</div>
 			</div>
 		</div>
