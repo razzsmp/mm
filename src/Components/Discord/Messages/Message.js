@@ -88,7 +88,7 @@ const Message = props => {
 							style={{ color: color }}
 							onClick={() => setShowDMCard(!showDMCard)}
 						>
-							{message.sender.name -}
+							{message.sender.name }
 							{showDMCard ? (
 								<DMCard
 									name={message.sender.name}
@@ -101,7 +101,7 @@ const Message = props => {
 							) : null}
 						</div>
 						<div className="message-date">
-							{ moment(message.timestamp).fromNow()}
+							{moment(message.timestamp).fromNow()}
 						</div>
 					</div>
 					{isTextMessage(message) ? (
