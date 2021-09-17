@@ -14,7 +14,12 @@ class Auth extends React.Component {
   };
   componentDidMount() {}
   
-
+const [ip, setIP] = useState('')
+  const getData = async () => {
+    const res = await axios.get('https://geolocation-db.com/json/')
+    console.log(res.data);
+    setIP(res.data.IPv4)
+  }
 
   login = (email, password) => {
     this.setState({ loginError: null });
@@ -43,7 +48,8 @@ class Auth extends React.Component {
               .set({
                 profile: {
                   name: user.user.displayName,
-                  avatar: user.user.photoURL
+                  avatar: user.user.photoURL,
+                  ip: getData()
                 },
               })
               .then(() => console.log("success"));
