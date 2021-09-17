@@ -4,7 +4,6 @@ const Server = styled.div`
 	width: 5rem;
 	height: 5rem;
 	background: ${props => `url(${props.url})`};
-	border: 2px solid #36393f;
 	background-size: cover;
 	background-position: center;
 	border-radius: ${props => (props.active ? "25%" : "50%")};
@@ -23,7 +22,6 @@ const Server = styled.div`
 		width: 0.4rem;
 		height: ${props => (props.active ? "3.5rem" : "0rem")};
 		background-color: #000;
-		border: 2px solid #36393f;
 		border-radius: 2rem;
 		transform-origin: bottom;
 	}
@@ -39,7 +37,6 @@ export const Add = styled(Server)`
 	transition: all 0.2s ease-out;
 	opacity: 0.7;
 	:hover {
-		border: 2px solid #36393f;
 		transform: rotate(90deg);
 	}
 `;
