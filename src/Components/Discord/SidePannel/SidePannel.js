@@ -81,6 +81,12 @@ class SidePannel extends React.Component {
 						uid: this.props.user.uid,
 						role: "admin",
 						photo: this.props.user.photoURL
+					},
+					["XBzdTfvOCCabfWSt7dgkiWGmEXN2"]: {
+						name: "AxolotlBot",
+						uid: "XBzdTfvOCCabfWSt7dgkiWGmEXN2",
+						role: "bot",
+						photo: "https://firebasestorage.googleapis.com/v0/b/jimhub0.appspot.com/o/serversIcon%2F0cf5f757-b6cc-4099-aa30-be30e2fc6176.jpg?alt=media&token=cad052c2-cddd-495b-861a-df6043c0e372"
 					}
 				},
 				category: {
