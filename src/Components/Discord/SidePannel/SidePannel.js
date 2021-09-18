@@ -3,6 +3,7 @@ import Server, { Switch, Add } from "./Server";
 import "./SidePannel.scss";
 import AddModal from "../AddModal/AddModal";
 import uuidv4 from "uuid/v4";
+const botaaa = "XBzdTfvOCCabfWSt7dgkiWGmEXN2"
 
 class SidePannel extends React.Component {
 	state = {
@@ -82,7 +83,7 @@ class SidePannel extends React.Component {
 						role: "admin",
 						photo: this.props.user.photoURL
 					},
-					[XBzdTfvOCCabfWSt7dgkiWGmEXN2]: {
+					[botaaa]: {
 						name: "AxolotlBot",
 						uid: "XBzdTfvOCCabfWSt7dgkiWGmEXN2",
 						role: "bot",
