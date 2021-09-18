@@ -3,6 +3,7 @@ import "firebase/auth";
 import "firebase/database";
 import "firebase/storage";
 import "firebase/analytics";
+import { getPerformance } from "firebase/performance";
 
 const firebaseConfig = {
   apiKey: "AIzaSyB7mgHqb4JFgYdk4vQvS3CTY9C6bNdeH9A",
@@ -17,5 +18,5 @@ const firebaseConfig = {
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 firebase.analytics();
-
+const perf = getPerformance(app);
 export default firebase;
