@@ -64,6 +64,11 @@ class SidePannel extends React.Component {
 						color: "#ff1f5a",
 						name: "admin"
 					},
+					bot: {
+						isAdmin: true,
+						color: "#36393f",
+						name: "bot"
+					},
 					normal: {
 						isAdmin: false,
 						color: "#ccc",
