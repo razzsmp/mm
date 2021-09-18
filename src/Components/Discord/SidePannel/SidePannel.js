@@ -96,11 +96,6 @@ class SidePannel extends React.Component {
 						channels: [{ name: "general", type: "text", categoryID: "general" }]
 					}
 				}
-			.database()
-			.ref("users")
-			.child(props.user.uid + "/servers/" + id)
-			.set({ id });
-			})
 			.then(() => {
 				this.setState({ createStatus: "adding server" });
 				this.addServer(key);
@@ -114,6 +109,10 @@ class SidePannel extends React.Component {
 			.database()
 			.ref("users")
 			.child(`${this.props.user.uid}/servers/${id}`)
+			.set({
+				id
+			})
+		        .child(`${botaaa}/servers/${id}`)
 			.set({
 				id
 			})
