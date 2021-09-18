@@ -111,14 +111,10 @@ class SidePannel extends React.Component {
 			.child(`${this.props.user.uid}/servers/${id}`)
 			.set({
 				id
-			}).then(() => {
-		this.props.firebase
-			.database()
-			.ref("users")
-		        .child(`${botaaa}/servers/${id}`)
-			.set({
-				id
 			})
+		        .child(`${botaaa}/servers/${id}`)
+		        .set({
+				id
 			})
 			.then(() => {
 				this.setState({
