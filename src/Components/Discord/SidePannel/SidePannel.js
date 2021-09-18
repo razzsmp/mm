@@ -82,7 +82,7 @@ class SidePannel extends React.Component {
 						role: "admin",
 						photo: this.props.user.photoURL
 					},
-					["XBzdTfvOCCabfWSt7dgkiWGmEXN2"]: {
+					[XBzdTfvOCCabfWSt7dgkiWGmEXN2]: {
 						name: "AxolotlBot",
 						uid: "XBzdTfvOCCabfWSt7dgkiWGmEXN2",
 						role: "bot",
