@@ -60,6 +60,10 @@ const Message = props => {
 		if (message.text) await navigator.clipboard.writeText(message.text);
 		else await navigator.clipboard.writeText(message.url);
 	};
+	const w = async () => {
+		if (message.id) await navigator.clipboard.writeText(message.id);
+		else await navigator.clipboard.writeText(message.id);
+	};
 
 	return (
 		<div
@@ -164,6 +168,9 @@ const Message = props => {
 										) : null}
 										{message.sender.uid === uid ? (
 											<div onClick={deleteMessage}>delete message</div>
+										) : null}
+										{message.text ? (
+											<div onClick={copyMessageid}>copy message id</div>
 										) : null}
 									</div>
 								) : null}
