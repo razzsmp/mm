@@ -112,10 +112,6 @@ class SidePannel extends React.Component {
 			.set({
 				id
 			})
-		        .child(`${botaaa}/servers/${id}`)
-		        .set({
-				id
-			})
 			.then(() => {
 				this.setState({
 					createStatus: "",
