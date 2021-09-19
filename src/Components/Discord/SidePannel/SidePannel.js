@@ -3,7 +3,6 @@ import Server, { Switch, Add } from "./Server";
 import "./SidePannel.scss";
 import AddModal from "../AddModal/AddModal";
 import uuidv4 from "uuid/v4";
-const botaaa = "XBzdTfvOCCabfWSt7dgkiWGmEXN2"
 
 class SidePannel extends React.Component {
 	state = {
@@ -65,11 +64,6 @@ class SidePannel extends React.Component {
 						color: "#ff1f5a",
 						name: "admin"
 					},
-					bot: {
-						isAdmin: true,
-						color: "#36393f",
-						name: "bot"
-					},
 					normal: {
 						isAdmin: false,
 						color: "#ccc",
@@ -82,12 +76,6 @@ class SidePannel extends React.Component {
 						uid: this.props.user.uid,
 						role: "admin",
 						photo: this.props.user.photoURL
-					},
-					[botaaa]: {
-						name: "AxolotlBot",
-						uid: "XBzdTfvOCCabfWSt7dgkiWGmEXN2",
-						role: "bot",
-						photo: "https://firebasestorage.googleapis.com/v0/b/jimhub0.appspot.com/o/serversIcon%2F0cf5f757-b6cc-4099-aa30-be30e2fc6176.jpg?alt=media&token=cad052c2-cddd-495b-861a-df6043c0e372"
 					}
 				},
 				category: {
@@ -96,6 +84,7 @@ class SidePannel extends React.Component {
 						channels: [{ name: "general", type: "text", categoryID: "general" }]
 					}
 				}
+			})
 			.then(() => {
 				this.setState({ createStatus: "adding server" });
 				this.addServer(key);
@@ -142,7 +131,7 @@ class SidePannel extends React.Component {
 			<div className="sidepannel">
 				<Switch
 					active={selectedServer === null}
-					url="https://historialmc.xyz/logo512.png"
+					url="https://www.jimhub.gq/logo512.png"
 					onClick={() => {
 						this.props.changeCurrentSelected({
 							server: null
