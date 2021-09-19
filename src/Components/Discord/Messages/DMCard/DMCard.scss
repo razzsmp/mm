@@ -1,9 +1,8 @@
 .dmcard {
 	background-color: rgba(35,38,43,1);
- 	border-width: 0px;
 	border-color: #000000;
   	border-radius: 5px;
-  	overflow: visible;
+  	overflow: hidden;
   	width: 194px;
  	height: 250px;
   	border-style: solid;
@@ -41,15 +40,17 @@
 	}
 	textarea {
 		font-family: Roboto;
- 		font-style: normal;
-		color: rgba(0,0,0,1);
- 		width: 176px;
-		height: 32px;
-  		background-color: rgba(230, 230, 230,1);
-		border-width: 0px;
-  		border-color: #000000;
-  		border-radius: 5px;
- 		border-style: solid;
- 		background: transparent;
+  font-style: normal;
+  font-weight: 400;
+  color: rgba(0,0,0,1);
+  width: 176px;
+  height: 32px;
+  background-color: rgba(35,38,43,1);
+  border-width: 2px;
+  border-color: rgba(9,10,11,1);
+  border-radius: 5px;
+  letter-spacing: 1px;
+  border-style: solid;
+  background: transparent;
 	}
 }
