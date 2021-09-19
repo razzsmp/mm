@@ -1,11 +1,13 @@
 .dmcard {
 	display: flex;
-	background-color: rgba(35,38,43,1);
-	border-radius: 15px;
-	flex-direction: column;
-	border-style: solid;
-	width: 384px;
-        height: 420px;
+        background-color: rgba(35,38,43,1);
+	border-width: 0px;
+   	border-color: #000000;
+  	border-radius: 5px;
+  	flex-direction: column;
+  	width: 279px;
+  	height: 361px;
+  	border-style: solid;
 
 	.dmcard-header {
 		display: flex;
