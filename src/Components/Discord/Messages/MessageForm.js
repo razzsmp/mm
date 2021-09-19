@@ -132,14 +132,14 @@ const MessageForm = props => {
 				<label htmlFor="file">+</label>
 				<input type="file" id="file" onChange={openModal} />
 			</div>
-
+                        const { server, channel, user, headerName, dm, messages } = this.props;
 			<form onSubmit={handleSubmit}>
 				<textarea
 					type="text"
 					value={message}
 					onChange={e => setMessage(e.target.value)}
 					onKeyPress={e => handleKeyDown(e)}
-					placeholder={`Message @ ${channel.name}`}
+					placeholder={`Message @ ${headerName}`}
 					autoFocus
 					ref={ref => (inputRef = ref)}
 				/>
