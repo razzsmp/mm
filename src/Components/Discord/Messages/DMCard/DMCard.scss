@@ -31,21 +31,14 @@
 		margin: 2rem;
 		width: 100%;
 		.role {
-			font-family: Roboto;
-  			font-style: normal;
-  			font-size: 18px;
-  			text-align: left;
+			margin-left: 2rem;
+			display: inline-block;
+			border-radius: 2rem;
+			padding: 0.3rem 1rem;
+			font-size: 1rem;
 		}
 	}
 	textarea {
-		font-family: Roboto;
- 		font-style: normal;
-  		color: rgba(0,0,0,1);
-  		width: 176px;
-  		height: 32px;
-  		background-color: rgba(35,38,43,1);
-  		border-radius: 5px;
-  		letter-spacing: 1px;
-  		background: transparent;
+		resize: none;
 	}
 }
