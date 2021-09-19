@@ -60,7 +60,7 @@ const Message = props => {
 		if (message.text) await navigator.clipboard.writeText(message.text);
 		else await navigator.clipboard.writeText(message.url);
 	};
-	const w = async () => {
+	const copyMessageid = async () => {
 		if (message.id) await navigator.clipboard.writeText(message.id);
 		else await navigator.clipboard.writeText(message.id);
 	};
