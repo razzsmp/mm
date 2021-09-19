@@ -6,9 +6,6 @@
 	margin: 0;
 	padding: 0;
 }
-body {
-	background-image: url(https://cdn.discordapp.com/attachments/815276496163307520/833752965818613760/wp4024487-pokimane-wallpapers.jpg);
-}
 @font-face {
 	src: url("./Assets/fonts/Whitney-LightSC.otf");
 	font-family: "inherit";
@@ -49,7 +46,7 @@ html {
 
 body {
 	margin: 0;
-	font-family: "Nato sans", "roboto", sans-serif;
+	font-family: "Comic Sans MS", "roboto", sans-serif;
 	color: rgb(105, 105, 105);
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
