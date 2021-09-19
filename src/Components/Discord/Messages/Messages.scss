@@ -161,12 +161,14 @@
 						color: var(--color-0);
 
 						.dot {
-							width: 3px;
-							height: 3px;
-							margin: 1px;
-							background-color: var(--color-0);
-							border-radius: 50%;
-							opacity: 0.7;
+							display: flex;
+  							background-color: #212121;
+  							justify-content: center;
+  							align-items: center;
+  							flex-direction: row;
+  							border-radius: 2px;
+  							min-width: 88px;
+  							box-shadow: 0px 1px 5px  0.35px #000 ;
 						}
 						.modify-options {
 							position: absolute;
