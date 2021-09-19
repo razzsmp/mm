@@ -20,27 +20,20 @@
 		height: 8rem;
 		border-radius: 50%;
 		background-size: cover;
-		background-position: center;
 	}
 	.name {
 		font-family: Roboto;
- 		top: 0px;
- 		position: absolute;
 		font-style: normal;
   		font-weight: 700;
   		color: rgba(255,255,255,1);
   		font-size: 29px;
   		text-align: center;
-  		left: 0px;
 	}
 	.role-wrapper {
 		margin: 2rem;
 		width: 100%;
 		.role {
 			font-family: Roboto;
-  			top: 0px;
-  			left: 0px;
-  			position: absolute;
   			font-style: normal;
   			font-weight: 700;
  			color: rgba(255,255,255,1);
@@ -50,8 +43,6 @@
 	}
 	textarea {
 		font-family: Roboto;
-  		top: 0px;
- 		left: 0px;
  		position: absolute;
  		font-style: normal;
 		font-weight: 400;
