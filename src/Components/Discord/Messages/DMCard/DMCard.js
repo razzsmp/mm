@@ -90,7 +90,7 @@ const DMCard = ({ name, uid, role, roleColor, close, photo }) => {
 			});
 	};
 	return (
-		<div className="dmcard" onMouseLeave={close}>
+		<div className="dmcard" onClick={close}>
 			<div className="dmcard-header">
 				<div
 					className="userPhoto"
