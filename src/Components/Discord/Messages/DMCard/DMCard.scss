@@ -38,19 +38,19 @@
   			text-align: left;
 		}
 	}
-	.textarea {
+	textarea {
 		font-family: Roboto;
-  font-style: normal;
-  font-weight: 400;
-  color: rgba(0,0,0,1);
-  width: 176px;
-  height: 32px;
-  background-color: rgba(35,38,43,1);
-  border-width: 2px;
-  border-color: rgba(9,10,11,1);
-  border-radius: 5px;
-  letter-spacing: 1px;
-  border-style: solid;
-  background: transparent;
+ 		font-style: normal;
+		font-weight: 400;
+		position: absolute;
+  		color: rgba(0,0,0,1);
+  		width: 176px;
+  		height: 32px;
+  		background-color: rgba(35,38,43,1);
+  		border-width: 2px;
+  		border-color: rgba(9,10,11,1);
+  		border-radius: 5px;
+  		letter-spacing: 1px;
+  		background: transparent;
 	}
 }
