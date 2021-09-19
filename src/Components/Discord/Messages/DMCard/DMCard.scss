@@ -24,30 +24,45 @@
 	}
 	.name {
 		font-family: Roboto;
+ 		top: 0px;
+ 		position: absolute;
 		font-style: normal;
-		color: rgba(255,255,255,1);
-		text-align: center;
+  		font-weight: 700;
+  		color: rgba(255,255,255,1);
+  		font-size: 29px;
+  		text-align: center;
+  		left: 0px;
 	}
 	.role-wrapper {
 		margin: 2rem;
 		width: 100%;
 		.role {
-			margin-left: 2rem;
-			display: inline-block;
-			border-radius: 2rem;
-			padding: 0.3rem 1rem;
-			font-size: 1rem;
+			font-family: Roboto;
+  			top: 0px;
+  			left: 0px;
+  			position: absolute;
+  			font-style: normal;
+  			font-weight: 700;
+ 			color: rgba(255,255,255,1);
+  			font-size: 18px;
+  			text-align: left;
 		}
 	}
 	textarea {
 		font-family: Roboto;
-		font-style: normal;
+  		top: 0px;
+ 		left: 0px;
+ 		position: absolute;
+ 		font-style: normal;
 		font-weight: 400;
 		color: rgba(0,0,0,1);
-		background-color: rgba(230, 230, 230,1);
-		border-width: 1px;
-		border-radius: 12px;
-		border-style: solid;
-		background: transparent;
+ 		width: 176px;
+		height: 32px;
+  		background-color: rgba(230, 230, 230,1);
+		border-width: 0px;
+  		border-color: #000000;
+  		border-radius: 5px;
+ 		border-style: solid;
+ 		background: transparent;
 	}
 }
