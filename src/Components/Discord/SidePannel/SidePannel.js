@@ -145,7 +145,7 @@ class SidePannel extends React.Component {
 
 				<Add
 					onClick={() => this.setState({ showModal: true })}
-					url="https://cdn3.iconfinder.com/data/icons/stroke/53/Button-512.png"
+					url="https://historialmc.xyz/add.png"
 				/>
 				{this.state.showModal ? (
 					<AddModal
