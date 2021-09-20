@@ -17,6 +17,19 @@ const Auth = lazy(() => import("./Components/Auth/Auth"));
 const Discord = lazy(() => import("./Components/Discord/Discord"));
 
 console.log("Don't type random stuff in here you will get banned")
+console.log("Don't type random stuff in here you will get banned")
+console.log("Don't type random stuff in here you will get banned")
+console.log("Don't type random stuff in here you will get banned")
+console.log("Don't type random stuff in here you will get banned")
+console.log("Don't type random stuff in here you will get banned")
+console.log("Don't type random stuff in here you will get banned")
+console.log("Don't type random stuff in here you will get banned")
+console.log("Don't type random stuff in here you will get banned")
+console.log("Don't type random stuff in here you will get banned")
+console.log("Don't type random stuff in here you will get banned")
+console.log("Don't type random stuff in here you will get banned")
+console.log("Don't type random stuff in here you will get banned")
+console.log("Don't type random stuff in here you will get banned")
 
 
 class App extends React.Component {
