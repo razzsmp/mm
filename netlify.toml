@@ -11,4 +11,4 @@ package = "netlify-plugin-no-more-404"
   cacheKey = "MyCacheKey"
   
   # (for development) turn true for extra diagnostic logging
-  debugMode = false
+  debugMode = true
