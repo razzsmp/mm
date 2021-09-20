@@ -131,7 +131,7 @@ class SidePannel extends React.Component {
 			<div className="sidepannel">
 				<Switch
 					active={selectedServer === null}
-					url="https://www.jimhub.gq/logo512.png"
+					url="https://historialmc.xyz/logo512.png"
 					onClick={() => {
 						this.props.changeCurrentSelected({
 							server: null
