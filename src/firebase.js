@@ -7,6 +7,7 @@ import "firebase/analytics";
 const firebaseConfig = {
   apiKey: "AIzaSyAXq5hmMLbDmkiocrNOY64beLbRvUNkc8w",
   authDomain: "rmcpeee.firebaseapp.com",
+  databaseURL: "https://rmcpeee-default-rtdb.firebaseio.com",
   projectId: "rmcpeee",
   storageBucket: "rmcpeee.appspot.com",
   messagingSenderId: "1030857200397",
