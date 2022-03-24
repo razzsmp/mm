@@ -5,13 +5,13 @@ import "firebase/storage";
 import "firebase/analytics";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAt_E-Ltb52qOFtLa2Eln8cfbTuzI4Cclo",
-  authDomain: "testing-e7b82.firebaseapp.com",
-  projectId: "testing-e7b82",
-  storageBucket: "testing-e7b82.appspot.com",
-  messagingSenderId: "550487568332",
-  appId: "1:550487568332:web:4b3e8c7699bd01fdc2f769",
-  measurementId: "G-4D3ZBTZMSL"
+  apiKey: "AIzaSyAXq5hmMLbDmkiocrNOY64beLbRvUNkc8w",
+  authDomain: "rmcpeee.firebaseapp.com",
+  projectId: "rmcpeee",
+  storageBucket: "rmcpeee.appspot.com",
+  messagingSenderId: "1030857200397",
+  appId: "1:1030857200397:web:bac921d85d34d4d96c5644",
+  measurementId: "G-TPEBNQ5B2H"
 };
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
