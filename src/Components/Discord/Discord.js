@@ -9,6 +9,7 @@ import UserPannel from "./UserPannel/UserPannel";
 import Messages from "./Messages/Messages";
 import Extra from "./Extra/Extra";
 import ServerUsers from "./Messages/ServerInfo/ServerUsers";
+import ServerInvite from "./Invite/invite";
 
 const extra = ["totalServers", "activity"];
 class Discord extends Component {
