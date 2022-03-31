@@ -1,7 +1,7 @@
 import React from "react";
 import Server, { Switch, Add } from "./Server";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
-import { Route, Switch } from "react-router-dom";
+import { Route } from "react-router-dom";
 import { withRouter } from "react-router";
 import firebase from "../../firebase";
  
