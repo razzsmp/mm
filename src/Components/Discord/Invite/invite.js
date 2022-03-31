@@ -6,7 +6,7 @@ import { withRouter } from "react-router";
 import firebase from "../../firebase";
  
 componentDidMount () {
-    const { id } = this.props.match.params
+    const { id } = this.props.match.params;
 }
 
 class Auth extends React.Component {
