@@ -2,15 +2,11 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 const Register = props => {
-	const [userid, setUserID] = useState("");
 	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
 	const [username, setUsername] = useState("");
 	const [errors, setErrors] = useState([]);
 	
-	function genuserid() {
-		return Math.random().toString(16).slice(-4)
-	}
 
 	const handleSubmit = event => {
 		event.preventDefault();
@@ -45,7 +41,7 @@ const Register = props => {
 					type="email"
 					autoComplete="email"
 					value={email}
-					onChange={e => setEmail(e.target.value), setUserID(genuserid)}
+					onChange={e => setEmail(e.target.value)}
 					style={{
 						borderColor: errors.includes("email")
 							? "#d72323"
