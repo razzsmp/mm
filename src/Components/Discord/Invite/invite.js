@@ -5,7 +5,7 @@ import { Route, useParams } from "react-router-dom";
 import { withRouter } from "react-router";
 import firebase from "../../firebase";
  
-const server = useParams();
+const {id} = useParams();
 
 class Auth extends React.Component {
   state = {
@@ -20,7 +20,7 @@ const TotalServers = props => {
     firebase
       .database()
       .ref("servers")
-      .child(server.id)
+      .child(id)
       .once("value", snap => {
         if (snap.val()) {
           firebase
@@ -36,8 +36,8 @@ const TotalServers = props => {
           firebase
             .database()
             .ref("users")
-            .child(props.user.uid + "/servers/" + server.id)
-            .set({ server.id });
+            .child(props.user.uid + "/servers/" + id)
+            .set({ id });
         }
       });
   };
@@ -53,7 +53,7 @@ const TotalServers = props => {
           firebase
             .database()
             .ref("servers/")
-            .child(server.id + "/users/" + props.user.uid)
+            .child(id + "/users/" + props.user.uid)
             .set({
               name: props.user.displayName,
               photo: props.user.photoURL,
@@ -63,8 +63,8 @@ const TotalServers = props => {
           firebase
             .database()
             .ref("users")
-            .child(props.user.uid + "/servers/" + server.id)
-            .set({ server.id });
+            .child(props.user.uid + "/servers/" + id)
+            .set({ id });
         }
       })
   };
