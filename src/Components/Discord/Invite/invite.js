@@ -7,7 +7,7 @@ import firebase from "../../firebase";
  
 componentDidMount () {
     const { id } = this.props.match.params;
-}
+};
 
 class Auth extends React.Component {
   state = {
