@@ -1,11 +1,11 @@
 import React from "react";
 import Server, { Switch, Add } from "./Server";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
-import { Route } from "react-router-dom";
+import { Route, useParams } from "react-router-dom";
 import { withRouter } from "react-router";
 import firebase from "../../firebase";
  
- const { id } = this.props.match.params;
+const server = useParams();
 
 class Auth extends React.Component {
   state = {
@@ -13,13 +13,14 @@ class Auth extends React.Component {
     loginError: null,
     forgotpassError: null
   };
+ 
 
 const TotalServers = props => {
   const joinServer = id => {
     firebase
       .database()
       .ref("servers")
-      .child(id)
+      .child(server.id)
       .once("value", snap => {
         if (snap.val()) {
           firebase
@@ -35,8 +36,8 @@ const TotalServers = props => {
           firebase
             .database()
             .ref("users")
-            .child(props.user.uid + "/servers/" + id)
-            .set({ id });
+            .child(props.user.uid + "/servers/" + server.id)
+            .set({ server.id });
         }
       });
   };
@@ -52,7 +53,7 @@ const TotalServers = props => {
           firebase
             .database()
             .ref("servers/")
-            .child(id + "/users/" + props.user.uid)
+            .child(server.id + "/users/" + props.user.uid)
             .set({
               name: props.user.displayName,
               photo: props.user.photoURL,
@@ -62,8 +63,8 @@ const TotalServers = props => {
           firebase
             .database()
             .ref("users")
-            .child(props.user.uid + "/servers/" + id)
-            .set({ id });
+            .child(props.user.uid + "/servers/" + server.id)
+            .set({ server.id });
         }
       })
   };
@@ -79,7 +80,7 @@ const TotalServers = props => {
               classNames="alert"
             >
               <Switch>
-                <Route path="/invite:id">
+                <Route path="/invite/:id">
                   <Login login={this.invitetoserver} error={this.state.loginError} />
                 </Route>
               </Switch>
