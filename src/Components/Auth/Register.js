@@ -31,7 +31,7 @@ const Register = props => {
 	
 
 	return (
-		const rand = 1000 + Math.random() * (9999 - 1000);
+		var rand = 1000 + Math.random() * (9999 - 1000);
 		<div className="register">
 			<h2>Create an account</h2>
 			<form onSubmit={handleSubmit}>
