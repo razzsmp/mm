@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 
 const Register = props => {
 	const [email, setEmail] = useState("");
-	var [tag, setTag] = ""
 	const [password, setPassword] = useState("");
 	const [username, setUsername] = useState("");
 	const [errors, setErrors] = useState([]);
@@ -12,7 +11,7 @@ const Register = props => {
 	const handleSubmit = event => {
 		event.preventDefault();
 		if (isValid()) {
-			props.register(email, tag, password, username);
+			props.register(email, password, username);
 		} else {
 		}
 	};
@@ -31,7 +30,6 @@ const Register = props => {
 	
 
 	return (
-		var rand = 1000 + Math.random() * (9999 - 1000);
 		<div className="register">
 			<h2>Create an account</h2>
 			<form onSubmit={handleSubmit}>
@@ -44,7 +42,7 @@ const Register = props => {
 					type="email"
 					autoComplete="email"
 					value={email}
-					onChange={e => setEmail(e.target.value), setTag(rand)}
+					onChange={e => setEmail(e.target.value)}
 					style={{
 						borderColor: errors.includes("email")
 							? "#d72323"
