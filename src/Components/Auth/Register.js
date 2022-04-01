@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Register = props => {
 	const [email, setEmail] = useState("");
-	const [tag, setTag] = useState("");
+	var [tag, setTag] = ""
 	const [password, setPassword] = useState("");
 	const [username, setUsername] = useState("");
 	const [errors, setErrors] = useState([]);
