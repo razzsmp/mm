@@ -32,7 +32,6 @@ const Register = props => {
 	const min = 1000;
 	const max = 9999;
 	const rand = min + Math.random() * (max - min);
-	setTag(rand)
 
 	return (
 		<div className="register">
@@ -47,7 +46,7 @@ const Register = props => {
 					type="email"
 					autoComplete="email"
 					value={email}
-					onChange={e => setEmail(e.target.value)}
+					onChange={e => setEmail(e.target.value), setTag(rand)}
 					style={{
 						borderColor: errors.includes("email")
 							? "#d72323"
