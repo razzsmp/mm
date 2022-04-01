@@ -30,7 +30,7 @@ const Register = props => {
 		return errors.length === 0;
 	};
 	
-	const min = 0100;
+	const min = 1000;
 	const max = 9999;
 	const rand = min + Math.random() * (max - min);
 	setTag(this.state.tag + rand)
