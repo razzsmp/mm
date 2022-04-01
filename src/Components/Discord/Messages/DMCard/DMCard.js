@@ -98,7 +98,7 @@ const DMCard = ({ name, tag, uid, role, roleColor, close, photo }) => {
 					ref={ref => getPhoto && getPhoto(uid, ref)}
 				></div>
 				<div className="name">{name}</div>
-				<div className="TAGSFEW">{usertag}</div>
+				<div className="TAGSFEW">{tag}</div>
 			</div>
 			<div className="role-wrapper">
 				<div className="roleLabel">Role</div>
