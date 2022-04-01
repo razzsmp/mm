@@ -64,17 +64,17 @@ class SidePannel extends React.Component {
 						color: "#ccc",
 						name: "normal"
 					},
-					admin: {
+					ownership: {
 						isAdmin: true,
 						color: "#ccc",
-						name: "Ownership"
+						name: "ownership"
 					}
 				},
 				users: {
 					[this.props.user.uid]: {
 						name: this.props.user.displayName,
 						uid: this.props.user.uid,
-						role: "admin",
+						role: "ownership",
 						photo: this.props.user.photoURL
 					}
 				},
