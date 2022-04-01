@@ -6,6 +6,7 @@ const Register = props => {
 	const [password, setPassword] = useState("");
 	const [username, setUsername] = useState("");
 	const [errors, setErrors] = useState([]);
+	this.state = { tag: 0 };
 	
 
 	const handleSubmit = event => {
@@ -27,6 +28,11 @@ const Register = props => {
 		setErrors(errors);
 		return errors.length === 0;
 	};
+	
+	const min = 0100;
+	const max = 9999;
+	const rand = min + Math.random() * (max - min);
+	this.setState({ tag: this.state.tag + rand });
 
 	return (
 		<div className="register">
