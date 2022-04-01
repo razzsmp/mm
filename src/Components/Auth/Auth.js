@@ -12,7 +12,9 @@ class Auth extends React.Component {
     registerError: null,
     loginError: null,
   };
-  componentDidMount() {}
+  componentDidMount() {
+  var tag = 1000 + Math.random() * (9999 - 1000);
+  }
  
 
   login = (email, password) => {
@@ -42,7 +44,7 @@ class Auth extends React.Component {
               .set({
                 profile: {
                   id: user.user.id,
-                  tag: this.state.random,
+                  tag: tag,
                   name: user.user.displayName,
                   avatar: user.user.photoURL
                 },
