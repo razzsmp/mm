@@ -145,7 +145,7 @@ class SidePannel extends React.Component {
 
 				<Add
 					onClick={() => this.setState({ showModal: true })}
-					url="https://www.discordstudio.live/apps.png"
+					url="https://discordstudio.live/server.png"
 				/>
 				{this.state.showModal ? (
 					<AddModal
