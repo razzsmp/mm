@@ -9,9 +9,10 @@ const Register = props => {
 	
 
 	const handleSubmit = event => {
+		var tag = 1000 + Math.random() * (9999 - 1000);
 		event.preventDefault();
 		if (isValid()) {
-			props.register(email, password, username);
+			props.register(email, password, tag, username);
 		} else {
 		}
 	};
