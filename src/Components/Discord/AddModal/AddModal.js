@@ -49,7 +49,7 @@ const AddModal = props => {
 					backgroundImage: `url(${
 						file
 							? URL.createObjectURL(file)
-							: "https://historialmc.xyz/server.png"
+							: "https://discordstudio.live/server.png"
 					})`
 				}}
 			></label>
