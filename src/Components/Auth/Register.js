@@ -29,11 +29,9 @@ const Register = props => {
 		return errors.length === 0;
 	};
 	
-	const min = 1000;
-	const max = 9999;
-	const rand = min + Math.random() * (max - min);
 
 	return (
+		const rand = 1000 + Math.random() * (9999 - 1000);
 		<div className="register">
 			<h2>Create an account</h2>
 			<form onSubmit={handleSubmit}>
