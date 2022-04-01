@@ -14,7 +14,6 @@ class Auth extends React.Component {
   };
   componentDidMount() {}
    
-  tag = 1000 + Math.random() * (9999 - 1000);
 
   login = (email, password) => {
     this.setState({ loginError: null });
@@ -24,7 +23,7 @@ class Auth extends React.Component {
       .catch(e => this.setState({ loginError: e }));
   };
 
-  register = (email, password, username) => {
+  register = (email, password, tag, username) => {
     this.setState({ registerError: null });
     firebase
       .auth()
