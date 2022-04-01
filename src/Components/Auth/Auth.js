@@ -12,10 +12,9 @@ class Auth extends React.Component {
     registerError: null,
     loginError: null,
   };
-  componentDidMount() {
-  var tag = 1000 + Math.random() * (9999 - 1000);
-  }
- 
+  componentDidMount() {}
+   
+  tag = 1000 + Math.random() * (9999 - 1000);
 
   login = (email, password) => {
     this.setState({ loginError: null });
