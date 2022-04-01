@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 const Register = props => {
 	const [email, setEmail] = useState("");
+	const [tag, setTag] = useState("");
 	const [password, setPassword] = useState("");
 	const [username, setUsername] = useState("");
 	const [errors, setErrors] = useState([]);
@@ -12,7 +13,7 @@ const Register = props => {
 	const handleSubmit = event => {
 		event.preventDefault();
 		if (isValid()) {
-			props.register(email, password, username);
+			props.register(email, tag, password, username);
 		} else {
 		}
 	};
@@ -32,7 +33,7 @@ const Register = props => {
 	const min = 0100;
 	const max = 9999;
 	const rand = min + Math.random() * (max - min);
-	this.setState({ tag: this.state.tag + rand });
+	setTag(this.state.tag + rand)
 
 	return (
 		<div className="register">
