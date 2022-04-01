@@ -42,6 +42,7 @@ class Auth extends React.Component {
               .set({
                 profile: {
                   id: user.user.id,
+                  tag: this.state.random,
                   name: user.user.displayName,
                   avatar: user.user.photoURL
                 },
