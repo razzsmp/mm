@@ -5,7 +5,6 @@ import { Route, useParams } from "react-router-dom";
 import { withRouter } from "react-router";
 import firebase from "../../firebase";
  
-const {id} = useParams();
 
 class Auth extends React.Component {
   state = {
@@ -14,6 +13,7 @@ class Auth extends React.Component {
     forgotpassError: null
   };
  
+ const id = useParams();
 
 const TotalServers = props => {
   const joinServer = id => {
