@@ -27,7 +27,7 @@ const MessageForm = props => {
 				photo: props.user.photoURL,
 				uid: props.user.uid
 			},
-			timestamp: new Date().getTime()
+			timestamp: new Date()
 		};
 		if (props.server) {
 			newMessage.sender.role = props.userRole.name;
