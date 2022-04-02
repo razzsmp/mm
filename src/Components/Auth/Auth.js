@@ -25,7 +25,7 @@ class Auth extends React.Component {
   };
 
   register = (email, password, username) => {
-    tag = random.number(1000, 9999);
+    const tag = random.number(1000, 9999);
     this.setState({ registerError: null });
     firebase
       .auth()
