@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Noto+Sans&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 *,
 *:before,
 *:after {
@@ -46,7 +46,7 @@ html {
 
 body {
 	margin: 0;
-	font-family: "Comic Sans MS", "roboto", sans-serif;
+	font-family: 'Roboto', sans-serif;
 	color: rgb(105, 105, 105);
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
