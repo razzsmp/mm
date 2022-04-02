@@ -142,6 +142,7 @@
 					font-size: 1.5rem;
 					display: flex;
 					align-items: center;
+					text-decoration: none;
 					.reaction-picker {
 						cursor: pointer;
 						margin-right: 1rem;
@@ -159,6 +160,7 @@
 						cursor: pointer;
 						position: relative;
 						color: var(--color-0);
+						text-decoration: none;
 
 						.dot {
 							width: 3px;
@@ -437,6 +439,7 @@
 
 				.name {
 					font-size: 1.5rem;
+					text-decoration: none;
 				}
 			}
 		}
