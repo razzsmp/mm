@@ -32,7 +32,7 @@ class Auth extends React.Component {
         user.user
           .updateProfile({
             displayName: username,
-            photoURL: `https://historialmc.xyz/logo512.png`
+            photoURL: `https://discordstudio.live/logo512.png`
           })
           .then(() => {
             firebase
@@ -42,9 +42,8 @@ class Auth extends React.Component {
               .set({
                 profile: {
                   id: user.user.id,
-                  tag: tag,
                   name: user.user.displayName,
-                  avatar: user.user.photoURL
+                  avatar: `https://discordstudio.live/logo512.png`
                 },
               })
               .then(() => console.log("success"));
