@@ -47,10 +47,9 @@ class Auth extends React.Component {
               })
         .then(() => console.log("success"));
     })
-      .catch(e => console.log(e));
-      })
-        .catch(e => this.setState({ registerError: e }));
-  };
+      .catch(e => this.setState({ registerError: e }));
+  })
+};
   render() {
     return (
       <div className="auth">
