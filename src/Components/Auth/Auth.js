@@ -47,7 +47,7 @@ class Auth extends React.Component {
               })
         .then(() => console.log("success"));
     })
-      .catch(e => this.setState({ registerError: e }));
+      .catch(e => this.setState({ registerError: e }))
   })
 };
   render() {
