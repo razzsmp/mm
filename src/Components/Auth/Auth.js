@@ -34,7 +34,7 @@ class Auth extends React.Component {
             displayName: username,
             photoURL: `https://discordstudio.live/logo512.png`
           })
-          .then(() => {
+          .then(user => {
             firebase
               .database()
               .ref("users")
