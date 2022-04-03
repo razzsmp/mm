@@ -1,7 +1,7 @@
-import React from "react";
+import { React, lazy} from "react";
 
 const DmUser = props => {
-  return (
+  lazy( return (
     <div
       className={props.active ? "active user" : "user"}
       onClick={props.onClick}
@@ -15,5 +15,6 @@ const DmUser = props => {
     </div>
   );
 };
+);
 
 export default DmUser;
