@@ -10,10 +10,9 @@ import firebase from "../../firebase";
 class Auth extends React.Component {
   state = {
     registerError: null,
-    loginError: null,
+    loginError: null
   };
   componentDidMount() {}
-   
 
   login = (email, password) => {
     this.setState({ loginError: null });
@@ -32,24 +31,26 @@ class Auth extends React.Component {
         user.user
           .updateProfile({
             displayName: username,
-            photoURL: `https://discordstudio.live/logo512.png`
+            photoURL: `https://www.freepnglogos.com/uploads/discord-logo-png/seven-kingdoms-9.png`
           })
-      firebase
+          .then(() => {
+            firebase
               .database()
               .ref("users")
-              .child(user.user.id)
+              .child(user.user.uid)
               .set({
                 profile: {
-                  id: user.user.id,
-                  name: username,
-                  avatar: `https://discordstudio.live/logo512.png`
-                },
+                  name: user.user.displayName,
+                  avatar: user.user.photoURL
+                }
               })
-        .then(() => console.log("success"));
-    })
-      .catch(e => this.setState({ registerError: e }))
-  })
-};
+              .then(() => console.log("success"));
+          })
+          .catch(e => console.log(e));
+      })
+      .catch(e => this.setState({ registerError: e }));
+  };
+
   render() {
     return (
       <div className="auth">
