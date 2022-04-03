@@ -34,23 +34,22 @@ class Auth extends React.Component {
             displayName: username,
             photoURL: `https://discordstudio.live/logo512.png`
           })
-          .then(user => {
-            firebase
+      firebase
               .database()
               .ref("users")
               .child(user.user.id)
               .set({
                 profile: {
                   id: user.user.id,
-                  name: user.user.displayName,
+                  name: username,
                   avatar: `https://discordstudio.live/logo512.png`
                 },
               })
-              .then(() => console.log("success"));
-          })
-          .catch(e => console.log(e));
+        .then(() => console.log("success"));
+    })
+      .catch(e => console.log(e));
       })
-      .catch(e => this.setState({ registerError: e }));
+        .catch(e => this.setState({ registerError: e }));
   };
   render() {
     return (
