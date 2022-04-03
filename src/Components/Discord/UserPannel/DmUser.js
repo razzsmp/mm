@@ -11,7 +11,7 @@ const DmUser = props => {
         style={{ backgroundImage: `url(${props.photo})` }}
       ></div>
       <div className="name">{props.name}</div>
-      <div className="fewtag">#0000</div>
+      <div className="tag">{props.tag}</div>
     </div>
   );
 };
