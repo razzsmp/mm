@@ -6,7 +6,6 @@ import { Route, Switch } from "react-router-dom";
 import { withRouter } from "react-router";
 import "./Auth.style.scss";
 import firebase from "../../firebase";
-import random from "@helper-modules/random";
 
 class Auth extends React.Component {
   state = {
@@ -25,7 +24,6 @@ class Auth extends React.Component {
   };
 
   register = (email, password, username) => {
-    const tag = random.number(1000, 9999);
     this.setState({ registerError: null });
     firebase
       .auth()
