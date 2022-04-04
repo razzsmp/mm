@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./DMCard.scss";
 import firebase from "../../../../firebase";
 
-const DMCard = ({ name, uid, role, roleColor, close, photo }) => {
+const DMCard = ({ name, tag, uid, role, roleColor, close, photo }) => {
 	const [message, setMessage] = useState("");
 	const currentUser = firebase.auth().currentUser;
 
@@ -89,7 +89,7 @@ const DMCard = ({ name, uid, role, roleColor, close, photo }) => {
 				ref.style.backgroundImage = `url(${snap.val()})`;
 			});
 	};
-	const tag = (uid, ref) => {
+	const getTag = (uid, ref) => {
 		if (!ref) return;
 		firebase
 			.database()
@@ -97,7 +97,7 @@ const DMCard = ({ name, uid, role, roleColor, close, photo }) => {
 			.child(uid)
 			.child("profile/")
 			.once("value", snap => {
-				tag = `${snap.val()}`;
+				ref.style.tag = `${snap.val()}`;
 			});
 	};
 	return (
