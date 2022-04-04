@@ -89,17 +89,6 @@ const DMCard = ({ name, tag, uid, role, roleColor, close, photo }) => {
 				ref.style.backgroundImage = `url(${snap.val()})`;
 			});
 	};
-	const getTag = (uid, ref) => {
-		if (!ref) return;
-		firebase
-			.database()
-			.ref("users/")
-			.child(uid)
-			.child("profile/")
-			.once("value", snap => {
-				ref.style.tag = `${snap.val()}`;
-			});
-	};
 	return (
 		<div className="dmcard" onClick={close}>
 			<div className="dmcard-header">
@@ -109,7 +98,7 @@ const DMCard = ({ name, tag, uid, role, roleColor, close, photo }) => {
 					ref={ref => getPhoto && getPhoto(uid, ref)}
 				></div>
 				<div className="name">{name}</div>
-				<div className="tag">#{tag}</div>
+				<div className="tag">#{firebase.database().ref("users/").child(uid).child("profile/").once("value", snap => { snap.val() })}</div>
 			</div>
 			<div className="role-wrapper">
 				<div className="roleLabel">Role</div>
