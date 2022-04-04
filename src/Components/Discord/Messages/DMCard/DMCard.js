@@ -4,6 +4,7 @@ import firebase from "../../../../firebase";
 
 const DMCard = ({ name, uid, role, roleColor, close, photo }) => {
 	const [message, setMessage] = useState("");
+	const [tag, setTag] = useState("");
 	const currentUser = firebase.auth().currentUser;
 
 	const handleSubmit = e => {
@@ -89,7 +90,8 @@ const DMCard = ({ name, uid, role, roleColor, close, photo }) => {
 				ref.style.backgroundImage = `url(${snap.val()})`;
 			});
 	};
-	const tag = firebase.database().ref("users/").child(uid).child("profile/").once("value", snap => { snap.val() })
+	const setztag = firebase.database().ref("users/").child(uid).child("profile/").once("value", snap => { snap.val() })
+	setTag(setztag);
 	return (
 		<div className="dmcard" onClick={close}>
 			<div className="dmcard-header">
@@ -99,7 +101,7 @@ const DMCard = ({ name, uid, role, roleColor, close, photo }) => {
 					ref={ref => getPhoto && getPhoto(uid, ref)}
 				></div>
 				<div className="name">{name}</div>
-				<div className="tag">#{currentUser.tag}</div>
+				<div className="tag">#{tag}</div>
 			</div>
 			<div className="role-wrapper">
 				<div className="roleLabel">Role</div>
