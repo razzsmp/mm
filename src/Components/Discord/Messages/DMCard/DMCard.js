@@ -89,6 +89,17 @@ const DMCard = ({ name, tag, uid, role, roleColor, close, photo }) => {
 				ref.style.backgroundImage = `url(${snap.val()})`;
 			});
 	};
+	const tag = (uid, ref) => {
+		if (!ref) return;
+		firebase
+			.database()
+			.ref("users/")
+			.child(uid)
+			.child("profile/")
+			.once("value", snap => {
+				tag = `${snap.val()}`;
+			});
+	};
 	return (
 		<div className="dmcard" onClick={close}>
 			<div className="dmcard-header">
