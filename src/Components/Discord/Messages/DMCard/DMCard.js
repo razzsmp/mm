@@ -31,6 +31,9 @@ const DMCard = ({ name, uid, role, roleColor, close, photo }) => {
 								text: message,
 								timestamp: firebase.database.ServerValue.TIMESTAMP
 							});
+						const a = firebase.auth().currentUser.tag
+						setTag(a);
+						
 					} else {
 						firebase
 							.database()
@@ -75,6 +78,8 @@ const DMCard = ({ name, uid, role, roleColor, close, photo }) => {
 							.set(path);
 					}
 				});
+			const a = firebase.auth().currentUser.tag
+			setTag(a);
 			setMessage("");
 			close();
 		}
@@ -90,8 +95,6 @@ const DMCard = ({ name, uid, role, roleColor, close, photo }) => {
 				ref.style.backgroundImage = `url(${snap.val()})`;
 			});
 	};
-	const setztag = firebase.database().ref("users/").child(uid).child("profile/").once("value", snap => { snap.val() })
-	setTag(setztag);
 	return (
 		<div className="dmcard" onClick={close}>
 			<div className="dmcard-header">
