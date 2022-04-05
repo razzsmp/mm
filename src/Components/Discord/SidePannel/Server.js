@@ -1,30 +1,29 @@
 import styled from "styled-components";
 
 const Server = styled.div`
-        overflow: auto;
-	width: 5rem;
-	height: 5rem;
-	background: ${props => `url(${props.url})`};
-	background-size: cover;
-	background-position: center;
-	border-radius: ${props => (props.active ? "25%" : "50%")};
-	margin-top: 0.8rem;
-	margin-bottom: 0.8rem;
+        background: #45494e;
+	width: 48px;
+	height: 48px;
+	border-radius: 50%;
 	cursor: pointer;
-	transition: all 0.2s ease-out;
+	position: relative;
+	transition: border-radius 128ms, background 128ms, color 128ms;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	:hover {
 		border-radius: 25%;
 	}
 	&:before {
-		content: "";
+		content: '';
+		width: 100%;
+		height: 100%;
+		background: #ffffff;
 		position: absolute;
-		margin-top: 0.8rem;
-		left: 0;
-		width: 0.4rem;
-		height: ${props => (props.active ? "3.5rem" : "0rem")};
-		background-color: #000;
-		border-radius: 2rem;
-		transform-origin: bottom;
+		border-radius: 5px;
+		top: 50%;
+		transform: translate(-100%, -50%) scale(0);
+		transition: transform 180ms;
 	}
 `;
 
