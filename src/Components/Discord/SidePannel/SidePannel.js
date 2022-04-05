@@ -128,7 +128,7 @@ class SidePannel extends React.Component {
 	render() {
 		const { selectedServer, joinedServers } = this.props;
 		return (
-			<div className="sidepannel">
+			<div className="nav">
 				<Switch
 					active={selectedServer === null}
 					url="https://www.discordstudio.live/apps.png"
