@@ -130,7 +130,6 @@ class SidePannel extends React.Component {
 		return (
 			<div className="guilds-container">
 				<popper-boi
-					<h4 class="popper-text">Home</h4>
 					active={selectedServer === null}
 					url="https://www.discordstudio.live/apps.png"
 					onClick={() => {
@@ -138,6 +137,7 @@ class SidePannel extends React.Component {
 							server: null
 						});
 					}}
+					<h4 class="popper-text">Home</h4>
 				/>
 				<div className="divider"></div>
 
