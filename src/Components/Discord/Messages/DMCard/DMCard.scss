@@ -1,10 +1,12 @@
 .dmcard {
-	background-color: rgba(35,38,43,1);
-  	border-radius: 5px;
-  	overflow: hidden;
-  	width: 194px;
- 	height: 250px;
-  	border-style: solid;
+	width: 250px;
+	height: 250px;
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.288);
+	border-radius: 23px;
+	flex-direction: column;
+	color: #fff;
+	position: relative;
+	overflow: hidden;
 
 	.dmcard-header {
 		display: flex;
