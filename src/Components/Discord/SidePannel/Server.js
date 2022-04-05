@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const Server = styled.div`
-        background: #45494e;
+        background: ${props => `url(${props.url})`};
 	width: 48px;
 	height: 48px;
 	border-radius: 50%;
