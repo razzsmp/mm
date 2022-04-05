@@ -137,7 +137,6 @@ class SidePannel extends React.Component {
 							server: null
 						});
 					}}
-					<h4 class="popper-text">Home</h4>
 				/>
 				<div className="divider"></div>
 
