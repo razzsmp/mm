@@ -138,12 +138,12 @@ class SidePannel extends React.Component {
 						});
 					}}
 				/>
-				<div className="underline"></div>
+				<div className="divider"></div>
 
 				{/* display joined servers */}
 				{joinedServers ? this.displayServers(joinedServers) : null}
 
-				<Add
+				<popper-boi
 					onClick={() => this.setState({ showModal: true })}
 					url="https://discordstudio.live/server.png"
 				/>
