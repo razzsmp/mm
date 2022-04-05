@@ -101,7 +101,7 @@ nav::-webkit-scrollbar {
 }
 
 .popper-boi {
-	background: var(--color-actually-black);
+	background: ${props => `url(${props.url})`};
 	padding: 0.68rem 1rem;
 	position: absolute;
 	top: 50%;
