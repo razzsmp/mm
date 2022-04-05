@@ -1,8 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600&display=swap");
+
+:root {
+	--color-blurple: #7289da;
+	--color-not-quite-black: #23272a;
+	--color-dark: #2c2f33;
+	--color-lighter-dark: #45494e;
+	--color-full-white: #ffffff;
+	--color-grey-white: #B9BBBE;
+	--color-grey-dark: #242629;
+	--color-actually-black: #000000;
+	--color-fantastic-green: #00ae7a;
+}
+
 .sidepannel {
-	width: 96px;
-	margin: 15px auto;
-	padding: 8px 0;
-	background-color: #23272A;
+	background: var(--color-lighter-dark);
+	width: 48px;
+	height: 48px;
+	border-radius: 50%;
+	cursor: pointer;
+	position: relative;
+	transition: border-radius 128ms, background 128ms, color 128ms;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 
 	.underline {
 		content: "";
