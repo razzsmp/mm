@@ -112,7 +112,7 @@ class SidePannel extends React.Component {
 	displayServers = servers => {
 		const keys = Object.keys(servers);
 		return keys.map(key => (
-			<Server
+			<popper-boi
 				active={key === this.props.selectedServer}
 				key={key}
 				url={servers[key].url || ""}
@@ -128,8 +128,9 @@ class SidePannel extends React.Component {
 	render() {
 		const { selectedServer, joinedServers } = this.props;
 		return (
-			<div className="nav">
-				<Switch
+			<div className="guilds-container">
+				<popper-boi
+					<h4 class="popper-text">Home</h4>
 					active={selectedServer === null}
 					url="https://www.discordstudio.live/apps.png"
 					onClick={() => {
