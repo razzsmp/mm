@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 const Server = styled.div`
+        overflow: auto;
 	width: 5rem;
 	height: 5rem;
 	background: ${props => `url(${props.url})`};
