@@ -59,22 +59,22 @@ class SidePannel extends React.Component {
 				id: key,
 			        ownerid: this.props.user.uid,
 				roles: {
+					admin: {
+						isAdmin: true,
+						color: "#ff1f5a",
+						name: "admin"
+					},
 					normal: {
 						isAdmin: false,
 						color: "#ccc",
 						name: "normal"
-					},
-					ownership: {
-						isAdmin: true,
-						color: "#ccc",
-						name: "ownership"
 					}
 				},
 				users: {
 					[this.props.user.uid]: {
 						name: this.props.user.displayName,
 						uid: this.props.user.uid,
-						role: "ownership",
+						role: "admin",
 						photo: this.props.user.photoURL
 					}
 				},
@@ -112,7 +112,7 @@ class SidePannel extends React.Component {
 	displayServers = servers => {
 		const keys = Object.keys(servers);
 		return keys.map(key => (
-			<popper-boi
+			<Server
 				active={key === this.props.selectedServer}
 				key={key}
 				url={servers[key].url || ""}
@@ -128,24 +128,24 @@ class SidePannel extends React.Component {
 	render() {
 		const { selectedServer, joinedServers } = this.props;
 		return (
-			<div className="guilds-container">
-				<popper-boi
+			<div className="sidepannel">
+				<Switch
 					active={selectedServer === null}
-					url="https://www.discordstudio.live/apps.png"
+					url="https://discordstudio.live/logo512.png"
 					onClick={() => {
 						this.props.changeCurrentSelected({
 							server: null
 						});
 					}}
 				/>
-				<div className="divider"></div>
+				<div className="underline"></div>
 
 				{/* display joined servers */}
 				{joinedServers ? this.displayServers(joinedServers) : null}
 
-				<popper-boi
+				<Add
 					onClick={() => this.setState({ showModal: true })}
-					url="https://discordstudio.live/server.png"
+					url="https://discordstudio.live/add.png"
 				/>
 				{this.state.showModal ? (
 					<AddModal
