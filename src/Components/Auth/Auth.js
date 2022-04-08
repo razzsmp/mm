@@ -51,7 +51,7 @@ class Auth extends React.Component {
                   tag: random(params)
                 }
               })
-              .then(() => console.log("success"));
+              .then(() => console.log('[LOGGER]' + user.user.displayName + 'was successfully created', 'color: #bada55'));
           })
           .catch(e => console.log(e));
       })
