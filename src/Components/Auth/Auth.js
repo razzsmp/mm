@@ -51,9 +51,11 @@ class Auth extends React.Component {
                   tag: random(params)
                 }
               })
-              .then(() => console.log('%c[LOGGER] %r' + user.user.displayName + ' was successfully created', 'color: #226688;'));
+              .then(() => console.log('%c[LOGGER]' + user.user.displayName + ' was successfully created', 'color: #226688;'));
           })
           .catch(e => console.log(e));
+      firebase.generateEmailVerificationLink(email).then(() => console.log('%c[LOGGER]' + user.user.displayName + ' sent verification email.', 'color: #226688;'));
+          })
       })
       .catch(e => this.setState({ registerError: e }));
   };
